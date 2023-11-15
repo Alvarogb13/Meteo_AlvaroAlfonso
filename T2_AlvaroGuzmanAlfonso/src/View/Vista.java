@@ -24,9 +24,10 @@ import java.awt.event.ActionEvent;
 public class Vista extends JFrame {
 	
 	public JTextField txtEspaa;
-	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Cataluña
+	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Cataluña, Cantabria
 	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, panel_1, panel_3, panel_2, CM;
-	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, cl, Lmapa, Landalucia, Lbaleares, Lcataluña, Lgalicia, Laragon, Lcanarias, CastillaM;
+	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, cl, Lmapa, Landalucia, Lbaleares, Lcataluña, Lgalicia, Laragon, Lcanarias, CastillaM
+	, LCantabria;
 	public JComboBox comboBox, comboBox_1;
 	public JButton BuscarPro, BuscarCM;
 
@@ -60,6 +61,17 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		Mapa = new JPanel();
+		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Mapa.setBounds(234, 0, 650, 500);
+		contentPane.add(Mapa);
+		Mapa.setLayout(null);
+		
+		Lmapa = new JLabel("");
+		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\espagne.png"));
+		Lmapa.setBounds(0, 0, 650, 500);
+		Mapa.add(Lmapa);
+		
 		andalucia = new JPanel();
 		andalucia.setLayout(null);
 		andalucia.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -72,6 +84,18 @@ public class Vista extends JFrame {
 		Landalucia.setBounds(0, 0, 650, 500);
 		andalucia.add(Landalucia);
 		
+		Cantabria = new JPanel();
+		Cantabria.setLayout(null);
+		Cantabria.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Cantabria.setBounds(234, 0, 650, 500);
+		contentPane.add(Cantabria);
+		Cantabria.setVisible(false);
+		
+		LCantabria = new JLabel("");
+		LCantabria.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\cantabrie.png"));
+		LCantabria.setBounds(0, 0, 650, 500);
+		Cantabria.add(LCantabria);
+		
 		CM = new JPanel();
 		CM.setLayout(null);
 		CM.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -82,17 +106,6 @@ public class Vista extends JFrame {
 		CastillaM.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\castillemancha.png"));
 		CastillaM.setBounds(0, 0, 650, 500);
 		CM.add(CastillaM);
-		
-		Mapa = new JPanel();
-		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Mapa.setBounds(234, 0, 650, 500);
-		contentPane.add(Mapa);
-		Mapa.setLayout(null);
-		
-		Lmapa = new JLabel("");
-		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\espagne.png"));
-		Lmapa.setBounds(0, 0, 650, 500);
-		Mapa.add(Lmapa);
 		
 		CL = new JPanel();
 		CL.setLayout(null);
@@ -278,7 +291,7 @@ public class Vista extends JFrame {
 		
 		comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUÑA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "MAPA"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUÑA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA"}));
 		comboBox.setBounds(10, 61, 188, 39);
 		panel_1.add(comboBox);
 		
