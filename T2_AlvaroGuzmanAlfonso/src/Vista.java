@@ -46,10 +46,10 @@ public class Vista extends JFrame {
 		andalucia.setBounds(234, 0, 650, 500);
 		contentPane.add(andalucia);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\andalu.png"));
-		lblNewLabel_1.setBounds(0, 0, 650, 500);
-		andalucia.add(lblNewLabel_1);
+		JLabel Landalucia = new JLabel("");
+		Landalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\andalu.png"));
+		Landalucia.setBounds(0, 0, 650, 500);
+		andalucia.add(Landalucia);
 		
 		JPanel andalucia_8_1 = new JPanel();
 		andalucia_8_1.setLayout(null);
