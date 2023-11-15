@@ -8,7 +8,7 @@ public class Ciudad {
         this.urlJson = urlJson;
     }
 
-    // Getters y setters (puedes generarlos automáticamente en Eclipse)
+    // Getters y setters
     public String getNombre() {
         return nombre;
     }

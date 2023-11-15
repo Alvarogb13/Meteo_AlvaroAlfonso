@@ -14,7 +14,7 @@ public class Pronostico {
         this.estadoCielo = estadoCielo;
     }
 
-    // Getters y setters (puedes generarlos automáticamente en Eclipse)
+    // Getters y setters
     public String getFecha() {
         return fecha;
     }
