@@ -5,6 +5,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+
+import Controller.Controlador;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -27,6 +30,7 @@ public class Vista extends JFrame {
 				try {
 					Vista frame = new Vista();
 					frame.setVisible(true);
+					Controlador controlador = new Controlador();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -46,6 +50,17 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JPanel Mapa = new JPanel();
+		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Mapa.setBounds(234, 0, 650, 500);
+		contentPane.add(Mapa);
+		Mapa.setLayout(null);
+		
+		JLabel Lmapa = new JLabel("");
+		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\espagne.png"));
+		Lmapa.setBounds(0, 0, 650, 500);
+		Mapa.add(Lmapa);
+		
 		JPanel CL = new JPanel();
 		CL.setLayout(null);
 		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -57,17 +72,6 @@ public class Vista extends JFrame {
 		cl.setBounds(0, 0, 650, 500);
 		CL.add(cl);
 		
-		JPanel Mapa = new JPanel();
-		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Mapa.setBounds(234, 0, 650, 500);
-		contentPane.add(Mapa);
-		Mapa.setLayout(null);
-		
-		JLabel Lmapa = new JLabel("");
-		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\lamina-mapa-de-espana-con-nombres.jpg"));
-		Lmapa.setBounds(0, 0, 650, 500);
-		Mapa.add(Lmapa);
-		
 		JPanel andalucia = new JPanel();
 		andalucia.setLayout(null);
 		andalucia.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -75,7 +79,7 @@ public class Vista extends JFrame {
 		contentPane.add(andalucia);
 		
 		JLabel Landalucia = new JLabel("");
-		Landalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\andalu.png"));
+		Landalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\andalousie.jpg"));
 		Landalucia.setBounds(0, 0, 650, 500);
 		andalucia.add(Landalucia);
 		

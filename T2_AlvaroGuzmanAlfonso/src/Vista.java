@@ -29,7 +29,7 @@ public class Vista extends JFrame {
 				try {
 					Vista frame = new Vista();
 					frame.setVisible(true);
-					Controlador controlador = new Controlador(frame);
+					Controlador controlador = new Controlador();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
