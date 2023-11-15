@@ -22,14 +22,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Vista extends JFrame {
-	
-	public JTextField txtEspaa;
 	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Cataluña, Cantabria
 	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, panel_1, panel_3, panel_2, CM;
 	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, cl, Lmapa, Landalucia, Lbaleares, Lcataluña, Lgalicia, Laragon, Lcanarias, CastillaM
 	, LCantabria;
 	public JComboBox comboBox, comboBox_1;
 	public JButton BuscarPro, BuscarCM;
+	private JLabel Lespaña;
+	private JLabel Ltmax;
+	private JLabel Ltmin;
 
 
 	/**
@@ -282,13 +283,6 @@ public class Vista extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		txtEspaa = new JTextField();
-		txtEspaa.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		txtEspaa.setText("ESPAÑA");
-		txtEspaa.setBounds(10, 11, 188, 39);
-		panel_1.add(txtEspaa);
-		txtEspaa.setColumns(10);
-		
 		comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUÑA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA"}));
@@ -310,6 +304,21 @@ public class Vista extends JFrame {
 		BuscarCM.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\TIK.png"));
 		BuscarCM.setBounds(208, 60, 40, 40);
 		panel_1.add(BuscarCM);
+		
+		Lespaña = new JLabel("ESPAÑA\r\n");
+		Lespaña.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+		Lespaña.setBounds(10, 11, 188, 39);
+		panel_1.add(Lespaña);
+		
+		Ltmax = new JLabel("TEM.MAXIMA");
+		Ltmax.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+		Ltmax.setBounds(308, 11, 188, 39);
+		panel_1.add(Ltmax);
+		
+		Ltmin = new JLabel("TEM.MINIMA");
+		Ltmin.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+		Ltmin.setBounds(550, 11, 188, 39);
+		panel_1.add(Ltmin);
 		
 		panel_2 = new JPanel();
 		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
