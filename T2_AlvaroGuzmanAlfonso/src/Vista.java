@@ -7,10 +7,13 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JTextField;
+import java.awt.Font;
 
 public class Vista extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField txtEspaa;
 
 	/**
 	 * Launch the application.
@@ -40,6 +43,17 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JPanel Mapa = new JPanel();
+		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Mapa.setBounds(234, 0, 650, 500);
+		contentPane.add(Mapa);
+		Mapa.setLayout(null);
+		
+		JLabel Lmapa = new JLabel("");
+		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\lamina-mapa-de-espana-con-nombres.jpg"));
+		Lmapa.setBounds(0, 0, 650, 500);
+		Mapa.add(Lmapa);
+		
 		JPanel andalucia = new JPanel();
 		andalucia.setLayout(null);
 		andalucia.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -51,176 +65,172 @@ public class Vista extends JFrame {
 		Landalucia.setBounds(0, 0, 650, 500);
 		andalucia.add(Landalucia);
 		
-		JPanel andalucia_8_1 = new JPanel();
-		andalucia_8_1.setLayout(null);
-		andalucia_8_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_8_1.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_8_1);
+		JPanel Valencia = new JPanel();
+		Valencia.setLayout(null);
+		Valencia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Valencia.setBounds(234, 0, 650, 500);
+		contentPane.add(Valencia);
 		
-		JLabel valencia = new JLabel("");
-		valencia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\valence.png"));
-		valencia.setBounds(0, 0, 650, 500);
-		andalucia_8_1.add(valencia);
+		JLabel Lvalencia = new JLabel("");
+		Lvalencia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\valence.png"));
+		Lvalencia.setBounds(0, 0, 650, 500);
+		Valencia.add(Lvalencia);
 		
-		JPanel andalucia_1 = new JPanel();
-		andalucia_1.setLayout(null);
-		andalucia_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_1.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_1);
+		JPanel Cataluña = new JPanel();
+		Cataluña.setLayout(null);
+		Cataluña.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Cataluña.setBounds(234, 0, 650, 500);
+		contentPane.add(Cataluña);
 		
-		JLabel cataluña = new JLabel("");
-		cataluña.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\catalogne.png"));
-		cataluña.setBounds(0, 0, 650, 500);
-		andalucia_1.add(cataluña);
+		JLabel Lcataluña = new JLabel("");
+		Lcataluña.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\catalogne.png"));
+		Lcataluña.setBounds(0, 0, 650, 500);
+		Cataluña.add(Lcataluña);
 		
-		JPanel andalucia_2 = new JPanel();
-		andalucia_2.setLayout(null);
-		andalucia_2.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_2.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_2);
+		JPanel Extremadura = new JPanel();
+		Extremadura.setLayout(null);
+		Extremadura.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Extremadura.setBounds(234, 0, 650, 500);
+		contentPane.add(Extremadura);
 		
-		JLabel extremadura = new JLabel("");
-		extremadura.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\estremadure.png"));
-		extremadura.setBounds(0, 0, 650, 500);
-		andalucia_2.add(extremadura);
+		JLabel Lextremadura = new JLabel("");
+		Lextremadura.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\estremadure.png"));
+		Lextremadura.setBounds(0, 0, 650, 500);
+		Extremadura.add(Lextremadura);
 		
-		JPanel andalucia_3 = new JPanel();
-		andalucia_3.setLayout(null);
-		andalucia_3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_3.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_3);
+		JPanel Galicia = new JPanel();
+		Galicia.setLayout(null);
+		Galicia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Galicia.setBounds(234, 0, 650, 500);
+		contentPane.add(Galicia);
 		
-		JLabel galicia = new JLabel("");
-		galicia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\galice.png"));
-		galicia.setBounds(0, 0, 650, 500);
-		andalucia_3.add(galicia);
+		JLabel Lgalicia = new JLabel("");
+		Lgalicia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\galice.png"));
+		Lgalicia.setBounds(0, 0, 650, 500);
+		Galicia.add(Lgalicia);
 		
-		JPanel andalucia_4 = new JPanel();
-		andalucia_4.setLayout(null);
-		andalucia_4.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_4.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_4);
+		JPanel Madrid = new JPanel();
+		Madrid.setLayout(null);
+		Madrid.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Madrid.setBounds(234, 0, 650, 500);
+		contentPane.add(Madrid);
 		
-		JLabel madrid = new JLabel("");
-		madrid.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\madrid.png"));
-		madrid.setBounds(0, 0, 650, 500);
-		andalucia_4.add(madrid);
+		JLabel Lmadrid = new JLabel("");
+		Lmadrid.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\madrid.png"));
+		Lmadrid.setBounds(0, 0, 650, 500);
+		Madrid.add(Lmadrid);
 		
-		JPanel andalucia_5 = new JPanel();
-		andalucia_5.setLayout(null);
-		andalucia_5.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_5.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_5);
+		JPanel Murcia = new JPanel();
+		Murcia.setLayout(null);
+		Murcia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Murcia.setBounds(234, 0, 650, 500);
+		contentPane.add(Murcia);
 		
-		JLabel murcia = new JLabel("");
-		murcia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\murcie.png"));
-		murcia.setBounds(0, 0, 650, 500);
-		andalucia_5.add(murcia);
+		JLabel Lmurcia = new JLabel("");
+		Lmurcia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\murcie.png"));
+		Lmurcia.setBounds(0, 0, 650, 500);
+		Murcia.add(Lmurcia);
 		
-		JPanel andalucia_6 = new JPanel();
-		andalucia_6.setLayout(null);
-		andalucia_6.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_6.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_6);
+		JPanel Navarra = new JPanel();
+		Navarra.setLayout(null);
+		Navarra.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Navarra.setBounds(234, 0, 650, 500);
+		contentPane.add(Navarra);
 		
-		JLabel navarra = new JLabel("");
-		navarra.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\navarre.png"));
-		navarra.setBounds(0, 0, 650, 500);
-		andalucia_6.add(navarra);
+		JLabel Lnavarra = new JLabel("");
+		Lnavarra.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\navarre.png"));
+		Lnavarra.setBounds(0, 0, 650, 500);
+		Navarra.add(Lnavarra);
 		
-		JPanel andalucia_7 = new JPanel();
-		andalucia_7.setLayout(null);
-		andalucia_7.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_7.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_7);
+		JPanel Pais_Vasco = new JPanel();
+		Pais_Vasco.setLayout(null);
+		Pais_Vasco.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Pais_Vasco.setBounds(234, 0, 650, 500);
+		contentPane.add(Pais_Vasco);
 		
-		JLabel pais_vasco = new JLabel("");
-		pais_vasco.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\paysbasque.png"));
-		pais_vasco.setBounds(0, 0, 650, 500);
-		andalucia_7.add(pais_vasco);
+		JLabel Lpais_vasco = new JLabel("");
+		Lpais_vasco.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\paysbasque.png"));
+		Lpais_vasco.setBounds(0, 0, 650, 500);
+		Pais_Vasco.add(Lpais_vasco);
 		
-		JPanel andalucia_8 = new JPanel();
-		andalucia_8.setLayout(null);
-		andalucia_8.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia_8.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia_8);
+		JPanel LaRioja = new JPanel();
+		LaRioja.setLayout(null);
+		LaRioja.setBorder(new LineBorder(new Color(0, 0, 0)));
+		LaRioja.setBounds(234, 0, 650, 500);
+		contentPane.add(LaRioja);
 		
-		JLabel larioja = new JLabel("");
-		larioja.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\rioja.png"));
-		larioja.setBounds(0, 0, 650, 500);
-		andalucia_8.add(larioja);
+		JLabel Llarioja = new JLabel("");
+		Llarioja.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\rioja.png"));
+		Llarioja.setBounds(0, 0, 650, 500);
+		LaRioja.add(Llarioja);
 		
-		JPanel mapa = new JPanel();
-		mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
-		mapa.setBounds(234, 0, 650, 500);
-		contentPane.add(mapa);
-		mapa.setLayout(null);
+		JPanel Aragon = new JPanel();
+		Aragon.setLayout(null);
+		Aragon.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Aragon.setBounds(234, 0, 650, 500);
+		contentPane.add(Aragon);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\lamina-mapa-de-espana-con-nombres.jpg"));
-		lblNewLabel.setBounds(0, 0, 650, 500);
-		mapa.add(lblNewLabel);
+		JLabel Laragon = new JLabel("");
+		Laragon.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\aragon.png"));
+		Laragon.setBounds(0, 0, 650, 500);
+		Aragon.add(Laragon);
 		
-		JPanel mapa_2 = new JPanel();
-		mapa_2.setLayout(null);
-		mapa_2.setBorder(new LineBorder(new Color(0, 0, 0)));
-		mapa_2.setBounds(234, 0, 650, 500);
-		contentPane.add(mapa_2);
+		JPanel Asturias = new JPanel();
+		Asturias.setLayout(null);
+		Asturias.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Asturias.setBounds(234, 0, 650, 500);
+		contentPane.add(Asturias);
 		
-		JLabel aragon = new JLabel("");
-		aragon.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\aragon.png"));
-		aragon.setBounds(0, 0, 650, 500);
-		mapa_2.add(aragon);
+		JLabel Lasturias = new JLabel("");
+		Lasturias.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\asturies.png"));
+		Lasturias.setBounds(0, 0, 650, 500);
+		Asturias.add(Lasturias);
 		
-		JPanel mapa_3 = new JPanel();
-		mapa_3.setLayout(null);
-		mapa_3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		mapa_3.setBounds(234, 0, 650, 500);
-		contentPane.add(mapa_3);
+		JPanel Baleares = new JPanel();
+		Baleares.setLayout(null);
+		Baleares.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Baleares.setBounds(234, 0, 650, 500);
+		contentPane.add(Baleares);
 		
-		JLabel asturias = new JLabel("");
-		asturias.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\asturies.png"));
-		asturias.setBounds(0, 0, 650, 500);
-		mapa_3.add(asturias);
+		JLabel Lbaleares = new JLabel("");
+		Lbaleares.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\baleares.png"));
+		Lbaleares.setBounds(0, 0, 650, 500);
+		Baleares.add(Lbaleares);
 		
-		JPanel mapa_4 = new JPanel();
-		mapa_4.setLayout(null);
-		mapa_4.setBorder(new LineBorder(new Color(0, 0, 0)));
-		mapa_4.setBounds(234, 0, 650, 500);
-		contentPane.add(mapa_4);
+		JPanel Canarias = new JPanel();
+		Canarias.setLayout(null);
+		Canarias.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Canarias.setBounds(234, 0, 650, 500);
+		contentPane.add(Canarias);
 		
-		JLabel baleares = new JLabel("");
-		baleares.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\baleares.png"));
-		baleares.setBounds(0, 0, 650, 500);
-		mapa_4.add(baleares);
+		JLabel Lcanarias = new JLabel("");
+		Lcanarias.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\canaries.png"));
+		Lcanarias.setBounds(0, 0, 650, 500);
+		Canarias.add(Lcanarias);
 		
-		JPanel mapa_5 = new JPanel();
-		mapa_5.setLayout(null);
-		mapa_5.setBorder(new LineBorder(new Color(0, 0, 0)));
-		mapa_5.setBounds(234, 0, 650, 500);
-		contentPane.add(mapa_5);
+		JPanel CL = new JPanel();
+		CL.setLayout(null);
+		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
+		CL.setBounds(234, 0, 650, 500);
+		contentPane.add(CL);
 		
-		JLabel canarias = new JLabel("");
-		canarias.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\canaries.png"));
-		canarias.setBounds(0, 0, 650, 500);
-		mapa_5.add(canarias);
-		
-		JPanel mapa_6 = new JPanel();
-		mapa_6.setLayout(null);
-		mapa_6.setBorder(new LineBorder(new Color(0, 0, 0)));
-		mapa_6.setBounds(234, 0, 650, 500);
-		contentPane.add(mapa_6);
-		
-		JLabel CL = new JLabel("");
-		CL.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\castilleleon.png"));
-		CL.setBounds(0, 0, 650, 500);
-		mapa_6.add(CL);
+		JLabel cl = new JLabel("");
+		cl.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\castilleleon.png"));
+		cl.setBounds(0, 0, 650, 500);
+		CL.add(cl);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_1.setBounds(0, 500, 884, 261);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
+		
+		txtEspaa = new JTextField();
+		txtEspaa.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+		txtEspaa.setText("ESPAÑA");
+		txtEspaa.setBounds(10, 11, 188, 39);
+		panel_1.add(txtEspaa);
+		txtEspaa.setColumns(10);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
