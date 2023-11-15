@@ -45,17 +45,6 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel Mapa = new JPanel();
-		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Mapa.setBounds(234, 0, 650, 500);
-		contentPane.add(Mapa);
-		Mapa.setLayout(null);
-		
-		JLabel Lmapa = new JLabel("");
-		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\lamina-mapa-de-espana-con-nombres.jpg"));
-		Lmapa.setBounds(0, 0, 650, 500);
-		Mapa.add(Lmapa);
-		
 		JPanel CL = new JPanel();
 		CL.setLayout(null);
 		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -77,6 +66,17 @@ public class Vista extends JFrame {
 		Landalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\andalousie.jpg"));
 		Landalucia.setBounds(0, 0, 650, 500);
 		andalucia.add(Landalucia);
+		
+		JPanel Mapa = new JPanel();
+		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Mapa.setBounds(234, 0, 650, 500);
+		contentPane.add(Mapa);
+		Mapa.setLayout(null);
+		
+		JLabel Lmapa = new JLabel("");
+		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\lamina-mapa-de-espana-con-nombres.jpg"));
+		Lmapa.setBounds(0, 0, 650, 500);
+		Mapa.add(Lmapa);
 		
 		JPanel Valencia = new JPanel();
 		Valencia.setLayout(null);
