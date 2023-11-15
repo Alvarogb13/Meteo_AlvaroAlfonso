@@ -4,13 +4,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import View.Vista;
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
 import Model.Ciudad;
+import Model.Pronostico;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 
 public class Controlador implements ActionListener {
 	
@@ -43,12 +51,55 @@ public class Controlador implements ActionListener {
 	    public List<Ciudad> getCiudades() {
 	        return ciudades;
 	    }
+	    
+	 // Método para obtener el pronóstico de una ciudad específica
+	    @SuppressWarnings("deprecation")
+		public List<Pronostico> obtenerPronostico(String nombreCiudad) {
+	        List<Pronostico> pronosticos = new ArrayList<>();
 
-	    // Aquí puedes implementar lógica para recuperar y analizar información climatológica desde las URLs JSON.
-	    // Puedes usar Gson u otra biblioteca para trabajar con JSON.
-	    // También podrías tener métodos para obtener el pronóstico de una ciudad específica, etc.
-	    // ...
+	        for (Ciudad ciudad : ciudades) {
+	            if (ciudad.getNombre().equals(nombreCiudad)) {
+	                try {
+	                    URL url = new URL(ciudad.getUrlJson());
+	                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+	                    connection.setRequestMethod("GET");
 
+	                    BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+	                    StringBuilder response = new StringBuilder();
+	                    String line;
+
+	                    while ((line = reader.readLine()) != null) {
+	                        response.append(line);
+	                    }
+
+	                    reader.close();
+	                    connection.disconnect();
+
+	                    // Analizar la respuesta JSON
+						JsonParser jsonParser = new JsonParser();
+	                    JsonObject jsonResponse = jsonParser.parse(response.toString()).getAsJsonObject();
+
+	                    // Adaptar el análisis según la estructura real de tu JSON
+	                    JsonArray pronosticoArray = jsonResponse.getAsJsonArray("daily_forecast");
+	                    for (int i = 0; i < pronosticoArray.size(); i++) {
+	                        JsonObject pronosticoJson = pronosticoArray.get(i).getAsJsonObject();
+	                        Pronostico pronostico = new Pronostico(
+	                                pronosticoJson.get("date").getAsString(),
+	                                nombreCiudad,
+	                                pronosticoJson.getAsJsonObject("temperature").get("max").getAsDouble(),
+	                                pronosticoJson.getAsJsonObject("temperature").get("min").getAsDouble(),
+	                                pronosticoJson.getAsJsonObject("day").get("condition").getAsString()
+	                        );
+	                        pronosticos.add(pronostico);
+	                    }
+	                } catch (Exception e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+
+	        return pronosticos;
+	    }
 	
 	ArrayList<String> Andalucia = new ArrayList<>();
 	ArrayList<String> Baleares = new ArrayList<>();
