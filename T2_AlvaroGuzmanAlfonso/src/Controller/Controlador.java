@@ -23,8 +23,74 @@ import com.google.gson.JsonParser;
 public class Controlador implements ActionListener {
 	
 	
-	 private List<Ciudad> ciudades;
+		private List<Ciudad> ciudades;
+		Vista vista = new Vista();
+		
+		public Controlador(Vista frame) {
+			vista=frame;
+			this.vista.BuscarCM.addActionListener(this);
+		}
 
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			int numero;
+			if (e.getSource() == this.vista.BuscarCM) {
+				numero=vista.comboBox.getSelectedIndex();
+				if (numero == 1) {
+					vista.andalucia.setVisible(true);
+					vista.Mapa.setVisible(false);
+				} else if (numero == 2) {
+					vista.Valencia.setVisible(true);
+					vista.Mapa.setVisible(false);
+				} else if (numero == 3) {
+					vista.Cataluña.setVisible(true);
+					vista.Mapa.setVisible(false);
+				} else if (numero == 4) {
+					vista.Extremadura.setVisible(true);
+					vista.Mapa.setVisible(false);
+				} else if (numero == 5) {
+					vista.Galicia.setVisible(true);
+					vista.Mapa.setVisible(false);
+				} else if (numero == 6) {
+					vista.Madrid.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.Murcia.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.Navarra.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.Pais_Vasco.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.LaRioja.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.Aragon.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.Baleares.setVisible(true);
+					vista.Mapa.setVisible(false);
+				} else if (numero == 6) {
+					vista.Baleares.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.Canarias.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.CM.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}else if (numero == 6) {
+					vista.Mapa.setVisible(true);
+					vista.Mapa.setVisible(false);
+				}
+			}
+		}
+		
+		
+		
+		
 	    public Controlador() {
 	        cargarCiudadesDesdeConfig();
 	    }
@@ -111,10 +177,7 @@ public class Controlador implements ActionListener {
 	static ArrayList<String> Galicia = new ArrayList<>();
 	static ArrayList<String> Navarra = new ArrayList<>();
 	static ArrayList<String> PaisVasco = new ArrayList<>();
-	static ArrayList<String> LaRioja = new ArrayList<>();
 	static ArrayList<String> Aragon = new ArrayList<>();
-	static ArrayList<String> Asturias = new ArrayList<>();
-	static ArrayList<String> cantabria = new ArrayList<>();
 	
 	public static void main(String[] args) {
 		Andalucia.add("Huelva");
@@ -169,16 +232,12 @@ public class Controlador implements ActionListener {
 		Galicia.add("Pontevedra");
 		Galicia.add("Orense");
 		
-		Navarra.add("Pamplona");
-	}
-	Vista vista = new Vista();
-	public Controlador(Vista frame) {
-		vista=frame;
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
+		PaisVasco.add("Vizcaya");
+		PaisVasco.add("Guipuzcua");
+		PaisVasco.add("Alava");
 		
-		
+		Aragon.add("Huesca");
+		Aragon.add("Zaragoza");
+		Aragon.add("Teruel");
 	}
 }
