@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import java.awt.Font;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class Vista extends JFrame {
 
@@ -42,6 +44,17 @@ public class Vista extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JPanel CL = new JPanel();
+		CL.setLayout(null);
+		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
+		CL.setBounds(234, 0, 650, 500);
+		contentPane.add(CL);
+		
+		JLabel cl = new JLabel("");
+		cl.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\castilleleon.png"));
+		cl.setBounds(0, 0, 650, 500);
+		CL.add(cl);
 		
 		JPanel Mapa = new JPanel();
 		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -208,18 +221,8 @@ public class Vista extends JFrame {
 		Lcanarias.setBounds(0, 0, 650, 500);
 		Canarias.add(Lcanarias);
 		
-		JPanel CL = new JPanel();
-		CL.setLayout(null);
-		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
-		CL.setBounds(234, 0, 650, 500);
-		contentPane.add(CL);
-		
-		JLabel cl = new JLabel("");
-		cl.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\castilleleon.png"));
-		cl.setBounds(0, 0, 650, 500);
-		CL.add(cl);
-		
 		JPanel panel_1 = new JPanel();
+		panel_1.setToolTipText("");
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_1.setBounds(0, 500, 884, 261);
 		contentPane.add(panel_1);
@@ -231,6 +234,11 @@ public class Vista extends JFrame {
 		txtEspaa.setBounds(10, 11, 188, 39);
 		panel_1.add(txtEspaa);
 		txtEspaa.setColumns(10);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "ANDALUCIA", "VALENCIA", "CATALUÑA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CL", "MAPA"}));
+		comboBox.setBounds(10, 61, 188, 39);
+		panel_1.add(comboBox);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
