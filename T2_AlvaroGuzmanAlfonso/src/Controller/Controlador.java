@@ -101,25 +101,76 @@ public class Controlador implements ActionListener {
 	        return pronosticos;
 	    }
 	
-	ArrayList<String> Andalucia = new ArrayList<>();
-	ArrayList<String> Baleares = new ArrayList<>();
-	ArrayList<String> Canarias = new ArrayList<>();
-	ArrayList<String> CastillaLeon = new ArrayList<>();
-	ArrayList<String> CastillaMancha = new ArrayList<>();
-	ArrayList<String> Cataluña = new ArrayList<>();
-	ArrayList<String> Estremadura = new ArrayList<>();
-	ArrayList<String> Galicia = new ArrayList<>();
-	ArrayList<String> Madrid = new ArrayList<>();
-	ArrayList<String> Murcia = new ArrayList<>();
-	ArrayList<String> Navarra = new ArrayList<>();
-	ArrayList<String> PaisVasco = new ArrayList<>();
-	ArrayList<String> LaRioja = new ArrayList<>();
-	ArrayList<String> Valencia = new ArrayList<>();
-	ArrayList<String> Aragon = new ArrayList<>();
-	ArrayList<String> Asturias = new ArrayList<>();
-	ArrayList<String> cantabria = new ArrayList<>();
+	static ArrayList<String> Andalucia = new ArrayList<>();
+	static ArrayList<String> Baleares = new ArrayList<>();
+	static ArrayList<String> Canarias = new ArrayList<>();
+	static ArrayList<String> CastillaLeon = new ArrayList<>();
+	static ArrayList<String> CastillaMancha = new ArrayList<>();
+	static ArrayList<String> Cataluña = new ArrayList<>();
+	static ArrayList<String> Estremadura = new ArrayList<>();
+	static ArrayList<String> Galicia = new ArrayList<>();
+	static ArrayList<String> Navarra = new ArrayList<>();
+	static ArrayList<String> PaisVasco = new ArrayList<>();
+	static ArrayList<String> LaRioja = new ArrayList<>();
+	static ArrayList<String> Aragon = new ArrayList<>();
+	static ArrayList<String> Asturias = new ArrayList<>();
+	static ArrayList<String> cantabria = new ArrayList<>();
 	
-
+	public static void main(String[] args) {
+		Andalucia.add("Huelva");
+		Andalucia.add("Sevilla");
+		Andalucia.add("Cadiz");
+		Andalucia.add("Malaga");
+		Andalucia.add("Cordoba");
+		Andalucia.add("Jaen");
+		Andalucia.add("Granada");
+		Andalucia.add("Almaeria");
+		
+		Baleares.add("Ibiza");
+		Baleares.add("Formentera");
+		Baleares.add("Cabrera");
+		Baleares.add("Mallorca");
+		Baleares.add("Menorca");
+		
+		Canarias.add("La Palma");
+		Canarias.add("Gomera");
+		Canarias.add("Hierro");
+		Canarias.add("Tenerife");
+		Canarias.add("Gran Canaria");
+		Canarias.add("Lanzarote");
+		Canarias.add("Fuenteventura");
+		
+		CastillaLeon.add("Leon");
+		CastillaLeon.add("Palencia");
+		CastillaLeon.add("Burgos");
+		CastillaLeon.add("Zamora");
+		CastillaLeon.add("Salamanca");
+		CastillaLeon.add("Avila");
+		CastillaLeon.add("Segovia");
+		CastillaLeon.add("Valladolid");
+		CastillaLeon.add("Soria");
+		
+		CastillaMancha.add("Toledo");
+		CastillaMancha.add("Cuenca");
+		CastillaMancha.add("Ciudad Real");
+		CastillaMancha.add("Albacete");
+		CastillaMancha.add("Guadalajara");
+		
+		Cataluña.add("Lerida");
+		Cataluña.add("Tarragona");
+		Cataluña.add("Barcelona");
+		Cataluña.add("Gerona");
+		
+		Estremadura.add("Caceres");
+		Estremadura.add("Badajoz");
+		
+		Galicia.add("La Coruña");
+		Galicia.add("Lugo");
+		Galicia.add("Pontevedra");
+		Galicia.add("Orense");
+		
+		Navarra.add("Pamplona");
+	}
 	Vista vista = new Vista();
 	public Controlador(Vista frame) {
 		vista=frame;
