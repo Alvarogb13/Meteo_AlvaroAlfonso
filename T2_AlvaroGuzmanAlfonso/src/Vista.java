@@ -45,17 +45,6 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel CL = new JPanel();
-		CL.setLayout(null);
-		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
-		CL.setBounds(234, 0, 650, 500);
-		contentPane.add(CL);
-		
-		JLabel cl = new JLabel("");
-		cl.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\castilleleon.png"));
-		cl.setBounds(0, 0, 650, 500);
-		CL.add(cl);
-		
 		JPanel Mapa = new JPanel();
 		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
 		Mapa.setBounds(234, 0, 650, 500);
@@ -67,6 +56,17 @@ public class Vista extends JFrame {
 		Lmapa.setBounds(0, 0, 650, 500);
 		Mapa.add(Lmapa);
 		
+		JPanel CL = new JPanel();
+		CL.setLayout(null);
+		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
+		CL.setBounds(234, 0, 650, 500);
+		contentPane.add(CL);
+		
+		JLabel cl = new JLabel("");
+		cl.setIcon(new ImageIcon("Imagenes/castilleleon.png"));
+		cl.setBounds(0, 0, 650, 500);
+		CL.add(cl);
+		
 		JPanel andalucia = new JPanel();
 		andalucia.setLayout(null);
 		andalucia.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -74,7 +74,7 @@ public class Vista extends JFrame {
 		contentPane.add(andalucia);
 		
 		JLabel Landalucia = new JLabel("");
-		Landalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\andalu.png"));
+		Landalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\andalousie.jpg"));
 		Landalucia.setBounds(0, 0, 650, 500);
 		andalucia.add(Landalucia);
 		
