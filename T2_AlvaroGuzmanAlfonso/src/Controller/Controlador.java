@@ -30,7 +30,7 @@ public class Controlador implements ActionListener {
 		Vista vista = new Vista();
 		
 		public Controlador(Vista frame) {
-			vista=frame;
+			vista = frame;
 			this.vista.BuscarCM.addActionListener(this);
 		}
 
@@ -178,9 +178,7 @@ public class Controlador implements ActionListener {
 	        return ciudades;
 	    }
 	    
-	 // Método para obtener el pronóstico de una ciudad específica
-	    @SuppressWarnings("deprecation")
-		public List<Pronostico> obtenerPronostico(String nombreCiudad) {
+	    public List<Pronostico> obtenerPronostico(String nombreCiudad) {
 	        List<Pronostico> pronosticos = new ArrayList<>();
 
 	        for (Ciudad ciudad : ciudades) {
@@ -190,35 +188,33 @@ public class Controlador implements ActionListener {
 	                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 	                    connection.setRequestMethod("GET");
 
-	                    BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-	                    StringBuilder response = new StringBuilder();
-	                    String line;
+	                    try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
+	                        StringBuilder response = new StringBuilder();
+	                        String line;
 
-	                    while ((line = reader.readLine()) != null) {
-	                        response.append(line);
+	                        while ((line = reader.readLine()) != null) {
+	                            response.append(line);
+	                        }
+
+	                        // Analizar la respuesta JSON
+	                        JsonParser jsonParser = new JsonParser();
+	                        JsonObject jsonResponse = jsonParser.parse(response.toString()).getAsJsonObject();
+
+	                        // Estructura JSON
+	                        JsonArray pronosticoArray = jsonResponse.getAsJsonArray("daily_forecast");
+	                        for (int i = 0; i < pronosticoArray.size(); i++) {
+	                            JsonObject pronosticoJson = pronosticoArray.get(i).getAsJsonObject();
+	                            Pronostico pronostico = new Pronostico(
+	                                    pronosticoJson.get("date").getAsString(),
+	                                    nombreCiudad,
+	                                    pronosticoJson.getAsJsonObject("temperature").get("max").getAsDouble(),
+	                                    pronosticoJson.getAsJsonObject("temperature").get("min").getAsDouble(),
+	                                    pronosticoJson.getAsJsonObject("day").get("condition").getAsString()
+	                            );
+	                            pronosticos.add(pronostico);
+	                        }
 	                    }
-
-	                    reader.close();
-	                    connection.disconnect();
-
-	                    // Analizar la respuesta JSON
-						JsonParser jsonParser = new JsonParser();
-	                    JsonObject jsonResponse = jsonParser.parse(response.toString()).getAsJsonObject();
-
-	                    // Adaptar el análisis según la estructura real de tu JSON
-	                    JsonArray pronosticoArray = jsonResponse.getAsJsonArray("daily_forecast");
-	                    for (int i = 0; i < pronosticoArray.size(); i++) {
-	                        JsonObject pronosticoJson = pronosticoArray.get(i).getAsJsonObject();
-	                        Pronostico pronostico = new Pronostico(
-	                                pronosticoJson.get("date").getAsString(),
-	                                nombreCiudad,
-	                                pronosticoJson.getAsJsonObject("temperature").get("max").getAsDouble(),
-	                                pronosticoJson.getAsJsonObject("temperature").get("min").getAsDouble(),
-	                                pronosticoJson.getAsJsonObject("day").get("condition").getAsString()
-	                        );
-	                        pronosticos.add(pronostico);
-	                    }
-	                } catch (Exception e) {
+	                } catch (IOException e) {
 	                    e.printStackTrace();
 	                }
 	            }
@@ -226,6 +222,7 @@ public class Controlador implements ActionListener {
 
 	        return pronosticos;
 	    }
+
 	
 
 	static ArrayList<String> Baleares = new ArrayList<>();
@@ -292,5 +289,10 @@ public class Controlador implements ActionListener {
 		Aragon.add("Huesca");
 		Aragon.add("Zaragoza");
 		Aragon.add("Teruel");
+		
+		
+		
 	}
+	
+	
 }

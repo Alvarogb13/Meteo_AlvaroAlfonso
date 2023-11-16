@@ -1,35 +1,45 @@
 package Model;
-public class Ciudad {
-    private String nombre;
-    private String urlJson;
 
-    public Ciudad(String nombre, String urlJson) {
-        this.nombre = nombre;
-        this.urlJson = urlJson;
-    }
+public class Ciudad {
+    private CityInfo city;
+    private ForecastInfo forecast;
+    private ClimateInfo climate;
 
     // Getters y setters
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+	public CityInfo getCity() {
+		return city;
+	}
 
-    public String getUrlJson() {
-        return urlJson;
-    }
+	public void setCity(CityInfo city) {
+		this.city = city;
+	}
 
-    public void setUrlJson(String urlJson) {
-        this.urlJson = urlJson;
-    }
+	public ForecastInfo getForecast() {
+		return forecast;
+	}
 
+	public void setForecast(ForecastInfo forecast) {
+		this.forecast = forecast;
+	}
+
+	public ClimateInfo getClimate() {
+		return climate;
+	}
+
+	public void setClimate(ClimateInfo climate) {
+		this.climate = climate;
+	}
+    
+    
     @Override
     public String toString() {
         return "Ciudad{" +
-                "nombre='" + nombre + '\'' +
-                ", urlJson='" + urlJson + '\'' +
+                "city=" + city +
+                ", forecast=" + forecast +
+                ", climate=" + climate +
                 '}';
     }
+
+
 }
