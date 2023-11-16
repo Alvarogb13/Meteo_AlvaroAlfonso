@@ -1,45 +1,39 @@
 package Model;
 
+import com.google.gson.JsonObject;
+
 public class Ciudad {
-    private CityInfo city;
-    private ForecastInfo forecast;
-    private ClimateInfo climate;
+    private String nombre;
+    private String urlJson;
 
-    // Getters y setters
-
-	public CityInfo getCity() {
-		return city;
-	}
-
-	public void setCity(CityInfo city) {
-		this.city = city;
-	}
-
-	public ForecastInfo getForecast() {
-		return forecast;
-	}
-
-	public void setForecast(ForecastInfo forecast) {
-		this.forecast = forecast;
-	}
-
-	public ClimateInfo getClimate() {
-		return climate;
-	}
-
-	public void setClimate(ClimateInfo climate) {
-		this.climate = climate;
-	}
-    
-    
-    @Override
-    public String toString() {
-        return "Ciudad{" +
-                "city=" + city +
-                ", forecast=" + forecast +
-                ", climate=" + climate +
-                '}';
+    public Ciudad(String nombre, String urlJson) {
+        this.nombre = nombre;
+        this.urlJson = urlJson;
     }
 
+    // Getter y Setter
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getUrlJson() {
+		return urlJson;
+	}
+
+	public void setUrlJson(String urlJson) {
+		this.urlJson = urlJson;
+	}
+    
+
+    // Constructor que acepta un objeto JSON
+    public Ciudad(JsonObject jsonCiudad) {
+        this.nombre = jsonCiudad.get("nombre").getAsString();
+        this.urlJson = jsonCiudad.get("urlJson").getAsString();
+    }
 
 }

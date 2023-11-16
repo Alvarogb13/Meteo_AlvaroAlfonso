@@ -18,6 +18,8 @@ import javax.swing.DefaultComboBoxModel;
 
 import Model.Ciudad;
 import Model.Pronostico;
+
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -156,7 +158,8 @@ public class Controlador implements ActionListener {
 	    }
 
 	    private void cargarCiudadesDesdeConfig() {
-	        ciudades = new ArrayList<>();
+	    	//Convertimos el JSON de cada ciudad en un objeto Ciudad
+	    	ciudades = new ArrayList<>();
 
 	        Properties configuracion = new Properties();
 
@@ -164,9 +167,13 @@ public class Controlador implements ActionListener {
 	            configuracion.load(new FileReader("src/resources/config.properties"));
 	            Set<String> nombresCiudades = configuracion.stringPropertyNames();
 
+	            Gson gson = new Gson();
+
 	            for (String nombreCiudad : nombresCiudades) {
-	                String urlJson = configuracion.getProperty(nombreCiudad);
-	                Ciudad ciudad = new Ciudad(nombreCiudad, urlJson);
+	                String jsonCiudadString = configuracion.getProperty(nombreCiudad);
+	                JsonObject jsonCiudad = JsonParser.parseString(jsonCiudadString).getAsJsonObject();
+
+	                Ciudad ciudad = gson.fromJson(jsonCiudad, Ciudad.class);
 	                ciudades.add(ciudad);
 	            }
 	        } catch (IOException e) {
@@ -196,21 +203,15 @@ public class Controlador implements ActionListener {
 	                            response.append(line);
 	                        }
 
-	                        // Analizar la respuesta JSON
-	                        JsonParser jsonParser = new JsonParser();
-	                        JsonObject jsonResponse = jsonParser.parse(response.toString()).getAsJsonObject();
+	                        // Deserializar el JSON
+	                        Gson gson = new Gson();
+	                        JsonObject jsonResponse = gson.fromJson(response.toString(), JsonObject.class);
 
-	                        // Estructura JSON
+	                        // Obtener el pronóstico diario
 	                        JsonArray pronosticoArray = jsonResponse.getAsJsonArray("daily_forecast");
 	                        for (int i = 0; i < pronosticoArray.size(); i++) {
 	                            JsonObject pronosticoJson = pronosticoArray.get(i).getAsJsonObject();
-	                            Pronostico pronostico = new Pronostico(
-	                                    pronosticoJson.get("date").getAsString(),
-	                                    nombreCiudad,
-	                                    pronosticoJson.getAsJsonObject("temperature").get("max").getAsDouble(),
-	                                    pronosticoJson.getAsJsonObject("temperature").get("min").getAsDouble(),
-	                                    pronosticoJson.getAsJsonObject("day").get("condition").getAsString()
-	                            );
+	                            Pronostico pronostico = gson.fromJson(pronosticoJson, Pronostico.class);
 	                            pronosticos.add(pronostico);
 	                        }
 	                    }
@@ -222,6 +223,7 @@ public class Controlador implements ActionListener {
 
 	        return pronosticos;
 	    }
+
 
 	
 
