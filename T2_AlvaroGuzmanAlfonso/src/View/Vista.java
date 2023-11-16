@@ -24,13 +24,35 @@ import java.awt.event.ActionEvent;
 public class Vista extends JFrame {
 	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Cataluña, Cantabria
 	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, panel_1, panel_3, panel_2, CM;
-	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, cl, Lmapa, Landalucia, Lbaleares, Lcataluña, Lgalicia, Laragon, Lcanarias, CastillaM
+	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, cl, mapa, Landalucia, Lbaleares, Lcataluña, Lgalicia, Laragon, Lcanarias, CastillaM
 	, LCantabria;
 	public JComboBox comboBox, comboBox_1;
 	public JButton BuscarPro, BuscarCM;
 	private JLabel Lespaña;
 	private JLabel Ltmax;
 	private JLabel Ltmin;
+	private JLabel Candalucia;
+	private JLabel Cvalencia;
+	private JLabel Cbarcelona;
+	private JLabel Cnavarra;
+	private JLabel Cpaisv;
+	private JLabel Casturias;
+	private JLabel Cgalicia;
+	private JLabel Cml;
+	private JLabel Cmurcia;
+	private JLabel Cbaleares;
+	private JLabel Ccanarias;
+	private JLabel Ccantabria;
+	private JLabel Caragon;
+	private JLabel Clarioja;
+	private JLabel Ahuelva;
+	private JLabel Asevilla;
+	private JLabel Acordoba;
+	private JLabel Ajaen;
+	private JLabel Agranada;
+	private JLabel Aalmeria;
+	private JLabel Amalaga;
+	private JLabel Acadiz;
 
 
 	/**
@@ -62,17 +84,6 @@ public class Vista extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		Mapa = new JPanel();
-		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Mapa.setBounds(234, 0, 650, 500);
-		contentPane.add(Mapa);
-		Mapa.setLayout(null);
-		
-		Lmapa = new JLabel("");
-		Lmapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\espagne.png"));
-		Lmapa.setBounds(0, 0, 650, 500);
-		Mapa.add(Lmapa);
-		
 		andalucia = new JPanel();
 		andalucia.setLayout(null);
 		andalucia.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -80,10 +91,139 @@ public class Vista extends JFrame {
 		contentPane.add(andalucia);
 		andalucia.setVisible(false);
 		
+		Ahuelva = new JLabel("");
+		Ahuelva.setBounds(67, 139, 50, 60);
+		andalucia.add(Ahuelva);
+		
+		Asevilla = new JLabel("");
+		Asevilla.setBounds(159, 253, 50, 60);
+		andalucia.add(Asevilla);
+		
+		Acordoba = new JLabel("");
+		Acordoba.setBounds(299, 155, 50, 60);
+		andalucia.add(Acordoba);
+		
+		Ajaen = new JLabel("");
+		Ajaen.setBounds(387, 155, 50, 60);
+		andalucia.add(Ajaen);
+		
+		Agranada = new JLabel("");
+		Agranada.setBounds(482, 185, 50, 60);
+		andalucia.add(Agranada);
+		
+		Aalmeria = new JLabel("");
+		Aalmeria.setBounds(558, 200, 50, 60);
+		andalucia.add(Aalmeria);
+		
+		Amalaga = new JLabel("");
+		Amalaga.setBounds(265, 333, 50, 60);
+		andalucia.add(Amalaga);
+		
+		Acadiz = new JLabel("");
+		Acadiz.setBounds(177, 383, 50, 60);
+		andalucia.add(Acadiz);
+		
 		Landalucia = new JLabel("");
 		Landalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\andalousie.jpg"));
 		Landalucia.setBounds(0, 0, 650, 500);
 		andalucia.add(Landalucia);
+		
+		Mapa = new JPanel();
+		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Mapa.setBounds(234, 0, 650, 500);
+		contentPane.add(Mapa);
+		Mapa.setLayout(null);
+		
+		JLabel Cextremadura = new JLabel("");
+		Cextremadura.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cextremadura.setBounds(216, 214, 50, 60);
+		Mapa.add(Cextremadura);
+		
+		Candalucia = new JLabel("");
+		Candalucia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Candalucia.setBounds(246, 345, 50, 60);
+		Mapa.add(Candalucia);
+		
+		JLabel Ccm = new JLabel("");
+		Ccm.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Ccm.setBounds(304, 214, 50, 60);
+		Mapa.add(Ccm);
+		
+		JLabel Cmadrid = new JLabel("");
+		Cmadrid.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cmadrid.setBounds(304, 154, 50, 60);
+		Mapa.add(Cmadrid);
+		
+		Cvalencia = new JLabel("");
+		Cvalencia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cvalencia.setBounds(419, 232, 50, 60);
+		Mapa.add(Cvalencia);
+		
+		Cbarcelona = new JLabel("");
+		Cbarcelona.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cbarcelona.setBounds(527, 102, 50, 60);
+		Mapa.add(Cbarcelona);
+		
+		Cnavarra = new JLabel("");
+		Cnavarra.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cnavarra.setBounds(341, 32, 50, 60);
+		Mapa.add(Cnavarra);
+		
+		Cpaisv = new JLabel("");
+		Cpaisv.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cpaisv.setBounds(391, 11, 50, 60);
+		Mapa.add(Cpaisv);
+		
+		Casturias = new JLabel("");
+		Casturias.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Casturias.setBounds(216, 0, 50, 60);
+		Mapa.add(Casturias);
+		
+		Cgalicia = new JLabel("");
+		Cgalicia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cgalicia.setBounds(108, 11, 50, 60);
+		Mapa.add(Cgalicia);
+		
+		Cml = new JLabel("");
+		Cml.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cml.setBounds(259, 115, 50, 60);
+		Mapa.add(Cml);
+		
+		Cmurcia = new JLabel("");
+		Cmurcia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cmurcia.setBounds(391, 311, 50, 60);
+		Mapa.add(Cmurcia);
+		
+		Cbaleares = new JLabel("");
+		Cbaleares.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Cbaleares.setBounds(562, 214, 50, 60);
+		Mapa.add(Cbaleares);
+		
+		Ccanarias = new JLabel("");
+		Ccanarias.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Ccanarias.setBounds(64, 429, 50, 60);
+		Mapa.add(Ccanarias);
+		
+		Ccantabria = new JLabel("");
+		Ccantabria.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Ccantabria.setBounds(281, 11, 50, 60);
+		Mapa.add(Ccantabria);
+		
+		Caragon = new JLabel("");
+		Caragon.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Caragon.setBounds(406, 102, 50, 60);
+		Mapa.add(Caragon);
+		
+		Clarioja = new JLabel("");
+		Clarioja.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		Clarioja.setBounds(351, 69, 50, 60);
+		Mapa.add(Clarioja);
+		
+		mapa = new JLabel("");
+		mapa.setBackground(new Color(255, 255, 255));
+		mapa.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\espagne.png"));
+		mapa.setBounds(0, 0, 650, 500);
+		Mapa.add(mapa);
 		
 		Cantabria = new JPanel();
 		Cantabria.setLayout(null);
@@ -283,6 +423,13 @@ public class Vista extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
+		JLabel DatoTemMax = new JLabel("");
+		DatoTemMax.setBackground(new Color(243, 182, 90));
+		DatoTemMax.setForeground(new Color(0, 0, 0));
+		DatoTemMax.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+		DatoTemMax.setBounds(308, 61, 162, 39);
+		panel_1.add(DatoTemMax);
+		
 		comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUÑA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA"}));
@@ -319,6 +466,11 @@ public class Vista extends JFrame {
 		Ltmin.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		Ltmin.setBounds(550, 11, 188, 39);
 		panel_1.add(Ltmin);
+		
+		JLabel DatoTemMin = new JLabel("");
+		DatoTemMin.setFont(new Font("Times New Roman", Font.PLAIN, 24));
+		DatoTemMin.setBounds(550, 61, 162, 39);
+		panel_1.add(DatoTemMin);
 		
 		panel_2 = new JPanel();
 		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
