@@ -13,12 +13,9 @@ import java.net.URL;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
-
 import javax.swing.DefaultComboBoxModel;
-
 import Model.Ciudad;
 import Model.Pronostico;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -180,6 +177,8 @@ public class Controlador implements ActionListener {
 	            e.printStackTrace();
 	        }
 	    }
+	    
+	    
 
 	    public List<Ciudad> getCiudades() {
 	        return ciudades;
