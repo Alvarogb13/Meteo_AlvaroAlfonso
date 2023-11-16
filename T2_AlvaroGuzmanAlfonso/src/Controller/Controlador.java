@@ -190,7 +190,7 @@ public class Controlador implements ActionListener {
 	        for (Ciudad ciudad : ciudades) {
 	            if (ciudad.getNombre().equals(nombreCiudad)) {
 	                try {
-	                    URL url = new URL(ciudad.getUrlJson());
+	                    URL url = new URL(ciudad.getUrlJson() + "&days=4");
 	                    HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 	                    connection.setRequestMethod("GET");
 
