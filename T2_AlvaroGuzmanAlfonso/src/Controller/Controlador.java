@@ -39,21 +39,22 @@ public class Controlador implements ActionListener {
 			int numero, numero2;
 			if (e.getSource() == this.vista.BuscarCM) {
 				numero=vista.comboBox.getSelectedIndex();
+				//Aqui en estos if he pensado en que si ves posible hacer un método y trabajar con el this, yo lo veo viable nao? para no tener tanta linea de codigo, de todas maneras la optimizacion la dejamos para cuando la app sea funcional si quieres, si lo ves easy de hacer guay sino np bru
 				if (numero == 1) {
 					vista.andalucia.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "HUELVA", "SEVILLA", "CADIZ", "MALAGA", "CORDOBA", "JAEN", "GRANADA", "ALMAERIA"}));
 					
 				} else if (numero == 2) {
 					vista.Valencia.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "VALENCIA"}));
 				} else if (numero == 3) {
-					vista.Cataluña.setVisible(true);
+					vista.Catalunia.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 					vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
@@ -62,91 +63,91 @@ public class Controlador implements ActionListener {
 					vista.Extremadura.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.CL.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "CACERES", "BADAJOZ"}));
 				} else if (numero == 5) {
 					vista.Galicia.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "LA CORUÑA", "ORENSE", "LUGO", "PONTEVEDRA"}));
 				} else if (numero == 6) {
 					vista.Madrid.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "MADRID"}));
 				} else if (numero == 7) {
 					vista.Murcia.setVisible(true);
 					vista.Mapa.setVisible(false);vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "MURCIA"}));
 				} else if (numero == 8) {
 					vista.Navarra.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "PAMPLONA"}));
 				} else if (numero == 9) {
 					vista.Pais_Vasco.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "VIZCAYA", "GUIPUZCUA", "ALAVA"}));
 				} else if (numero == 10) {
 					vista.LaRioja.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.CL.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "LOGROÑO"}));
 				} else if (numero == 11) {
 					vista.Aragon.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "HUESCA", "ZARAGOZA", "TERUEL"}));
 				} else if (numero == 12) {
 					vista.Baleares.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "MALLORCA", "MENORCA", "CABRERA", "FORMENTERA", "IBIZA"}));
 				} else if (numero == 13) {
 					vista.Canarias.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "LA PALMA", "GOMERA", "HIERRO", "TENERIFE", "GRAN CANARIA", "LANZAROTE", "FUENTEVENTURA"}));
 				} else if (numero == 14) {
 					vista.CL.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "LEON", "PALENCIA", "BURGOS", "ZAMORA", "SALAMANCA", "AVILA", "SEGOVIA", "VALLADOLID", "SORIA"}));
 				} else if (numero == 15) {
 					vista.CM.setVisible(true);
 					vista.Mapa.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "CIUDAD REAL", "ALBACETE", "GUADALAJARA", "CUENCA", "TOLEDO"}));
 				} else if (numero == 16) {
 					vista.Cantabria.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.CL.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.CL.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "CANTABRIA"}));
 				} else if (numero == 17) {
 					vista.Asturias.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "OVIEDO"}));
 				} else if (numero == 18) {
 					vista.Mapa.setVisible(true);
 					vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
-					vista.Cataluña.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
+					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA"}));
 				}
 			}
@@ -232,8 +233,8 @@ public class Controlador implements ActionListener {
 	static ArrayList<String> Canarias = new ArrayList<>();
 	static ArrayList<String> CastillaLeon = new ArrayList<>();
 	static ArrayList<String> CastillaMancha = new ArrayList<>();
-	static ArrayList<String> Cataluña = new ArrayList<>();
-	static ArrayList<String> Estremadura = new ArrayList<>();
+	static ArrayList<String> Catalunia = new ArrayList<>();
+	static ArrayList<String> Extremadura = new ArrayList<>();
 	static ArrayList<String> Galicia = new ArrayList<>();
 	static ArrayList<String> Navarra = new ArrayList<>();
 	static ArrayList<String> PaisVasco = new ArrayList<>();
@@ -272,13 +273,13 @@ public class Controlador implements ActionListener {
 		CastillaMancha.add("Albacete");
 		CastillaMancha.add("Guadalajara");
 		
-		Cataluña.add("Lerida");
-		Cataluña.add("Tarragona");
-		Cataluña.add("Barcelona");
-		Cataluña.add("Gerona");
+		Catalunia.add("Lerida");
+		Catalunia.add("Tarragona");
+		Catalunia.add("Barcelona");
+		Catalunia.add("Gerona");
 		
-		Estremadura.add("Caceres");
-		Estremadura.add("Badajoz");
+		Extremadura.add("Caceres");
+		Extremadura.add("Badajoz");
 		
 		Galicia.add("La Coruña");
 		Galicia.add("Lugo");

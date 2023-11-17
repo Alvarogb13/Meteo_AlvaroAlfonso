@@ -23,9 +23,9 @@ import java.awt.event.ActionEvent;
 
 public class Vista extends JFrame {
 	
-	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Cataluña, Cantabria
+	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Catalunia, Cantabria
 	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, panel_1, panel_3, panel_2, CM;
-	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, Lcl, mapa, Landalucia, Lbaleares, Lcataluña, Lgalicia, Laragon, Lcanarias, LCastillaM
+	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, Lcl, mapa, Landalucia, Lbaleares, LCatalunia, Lgalicia, Laragon, Lcanarias, LCastillaM
 	, LCantabria;
 	public JComboBox comboBox, comboBox_1;
 	public JButton BuscarPro, BuscarCM;
@@ -33,7 +33,7 @@ public class Vista extends JFrame {
 	, CApaisv, CAasturias, CAgalicia, CAml, CAmurcia, CAbaleares, CAcanarias, CAcantabria, CAaragon, CAlarioja, Ahuelva, Asevilla, Acordoba, Ajaen, Agranada, Aalmeria, Amalaga, Acadiz, Valicante
 	, Vvalencia, Vcastellon, Clerida, Ctarragona, Cbarcelona, Cgerona , Ecaceres, Ebadajoz, Glacoruña, Gpontebedra, Glugo, Gorense, Mmadrid, Mmurcia, Npamplona, PValava, PVguipuzcua, PVvizcaya, LRlogroño,
 	Atreruel, Azaragoza, Ahuesca, Aoviedo, Bibiza, Bformentera, Bcabrera, Bmallorca, Bmenorca, Cpalma, Chierro, Cgomera, Ctenerife, Ccanaria, Cfuenteventura, Clanzarote, DatoTemMin, DatoTemMax
-	, Ccantabria, CMtoledo, CMciudadreal, CMalbacete, CMcuenca, CMguadalajara, CLzamora, CLsalamanca, CLavila, CLsegovia, CLsoria, CLburgos, CLpalenccia, CLleon, CAmadrid, CAcm, CAextremadura;
+	, Ccantabria, CMtoledo, CMciudadreal, CMalbacete, CMcuenca, CMguadalajara, CLzamora, CLsalamanca, CLavila, CLsegovia, CLsoria, CLburgos, CLpalencia, CLleon, CAmadrid, CAcm, CAextremadura;
 
 
 	/**
@@ -64,7 +64,7 @@ public class Vista extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+		//Aqui tenemos que hacer un refactor y poner la ruta relativa Alvaro porque no me salen las imagenes, el refactor es con control F le pones lo que quieres cambiar (la ruta de abajo hasta antes de Imagenes con la ruta relativa que sera .//src//Imagenes//nombre.png o sin el punto al principio, de todas maneras eso lo vemos luego np
 		Mapa = new JPanel();
 		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
 		Mapa.setBounds(234, 0, 650, 500);
@@ -410,33 +410,33 @@ public class Vista extends JFrame {
 		Lextremadura.setBounds(0, 0, 650, 500);
 		Extremadura.add(Lextremadura);
 		
-		Cataluña = new JPanel();
-		Cataluña.setLayout(null);
-		Cataluña.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Cataluña.setBounds(234, 0, 650, 500);
-		contentPane.add(Cataluña);
-		Cataluña.setVisible(false);
+		Catalunia = new JPanel();
+		Catalunia.setLayout(null);
+		Catalunia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Catalunia.setBounds(234, 0, 650, 500);
+		contentPane.add(Catalunia);
+		Catalunia.setVisible(false);
 		
 		Clerida = new JLabel("");
 		Clerida.setBounds(149, 191, 50, 60);
-		Cataluña.add(Clerida);
+		Catalunia.add(Clerida);
 		
 		Ctarragona = new JLabel("");
 		Ctarragona.setBounds(184, 316, 50, 60);
-		Cataluña.add(Ctarragona);
+		Catalunia.add(Ctarragona);
 		
 		Cbarcelona = new JLabel("");
 		Cbarcelona.setBounds(323, 270, 50, 60);
-		Cataluña.add(Cbarcelona);
+		Catalunia.add(Cbarcelona);
 		
 		Cgerona = new JLabel("");
 		Cgerona.setBounds(510, 175, 50, 60);
-		Cataluña.add(Cgerona);
+		Catalunia.add(Cgerona);
 		
-		Lcataluña = new JLabel("");
-		Lcataluña.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\catalogne.png"));
-		Lcataluña.setBounds(0, 0, 650, 500);
-		Cataluña.add(Lcataluña);
+		LCatalunia = new JLabel("");
+		LCatalunia.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\catalogne.png"));
+		LCatalunia.setBounds(0, 0, 650, 500);
+		Catalunia.add(LCatalunia);
 		
 		Valencia = new JPanel();
 		Valencia.setLayout(null);
@@ -473,9 +473,9 @@ public class Vista extends JFrame {
 		CLleon.setBounds(199, 68, 50, 60);
 		CL.add(CLleon);
 		
-		CLpalenccia = new JLabel("");
-		CLpalenccia.setBounds(280, 84, 50, 60);
-		CL.add(CLpalenccia);
+		CLpalencia = new JLabel("");
+		CLpalencia.setBounds(280, 84, 50, 60);
+		CL.add(CLpalencia);
 		
 		CLburgos = new JLabel("");
 		CLburgos.setBounds(402, 167, 50, 60);
@@ -613,7 +613,7 @@ public class Vista extends JFrame {
 		
 		comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUÑA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUNIA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA"}));
 		comboBox.setBounds(10, 61, 188, 39);
 		panel_1.add(comboBox);
 		
