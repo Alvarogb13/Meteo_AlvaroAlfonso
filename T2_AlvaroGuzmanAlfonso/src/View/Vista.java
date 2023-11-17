@@ -3,6 +3,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
@@ -21,7 +22,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Vista extends JFrame {
+public class Vista extends JFrame{
 	
 	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Catalunia, Cantabria
 	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, panel_1, panel_3, panel_2, CM;
@@ -34,6 +35,9 @@ public class Vista extends JFrame {
 	, Vvalencia, Vcastellon, Clerida, Ctarragona, Cbarcelona, Cgerona , Ecaceres, Ebadajoz, Glacoruña, Gpontebedra, Glugo, Gorense, Mmadrid, Mmurcia, Npamplona, PValava, PVguipuzcua, PVvizcaya, LRlogroño,
 	Atreruel, Azaragoza, Ahuesca, Aoviedo, Bibiza, Bformentera, Bcabrera, Bmallorca, Bmenorca, Cpalma, Chierro, Cgomera, Ctenerife, Ccanaria, Cfuenteventura, Clanzarote, DatoTemMin, DatoTemMax
 	, Ccantabria, CMtoledo, CMciudadreal, CMalbacete, CMcuenca, CMguadalajara, CLzamora, CLsalamanca, CLavila, CLsegovia, CLsoria, CLburgos, CLpalencia, CLleon, CAmadrid, CAcm, CAextremadura;
+	
+	//EJEMPLO PARA FUNCIONALIDAD A VER SI FUNSIONA
+	public JTextArea textAreaPrueba;
 
 
 	/**
@@ -57,6 +61,7 @@ public class Vista extends JFrame {
 	 * Create the frame.
 	 */
 	public Vista() {
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 800);
 		contentPane = new JPanel();
@@ -66,6 +71,12 @@ public class Vista extends JFrame {
 		contentPane.setLayout(null);
 		//Aqui tenemos que hacer un refactor y poner la ruta relativa Alvaro porque no me salen las imagenes, el refactor es con control F le pones lo que quieres cambiar (la ruta de abajo hasta antes de Imagenes con la ruta relativa que sera .//src//Imagenes//nombre.png o sin el punto al principio, de todas maneras eso lo vemos luego np
 		Mapa = new JPanel();
+		
+		//PRUEBA HUMILDE DEL METODO DE OBTENER PRONOSTICO EN LA INTERFAS CON ESTE TEXTAREA
+		textAreaPrueba = new JTextArea();
+		textAreaPrueba.setBounds(120, 115, 5, 22);
+		Mapa.add(textAreaPrueba);
+
 		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
 		Mapa.setBounds(234, 0, 650, 500);
 		contentPane.add(Mapa);
