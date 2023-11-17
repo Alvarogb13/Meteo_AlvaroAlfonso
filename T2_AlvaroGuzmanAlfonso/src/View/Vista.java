@@ -22,73 +22,18 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Vista extends JFrame {
+	
 	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Cataluña, Cantabria
 	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, panel_1, panel_3, panel_2, CM;
 	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, Lcl, mapa, Landalucia, Lbaleares, Lcataluña, Lgalicia, Laragon, Lcanarias, LCastillaM
 	, LCantabria;
 	public JComboBox comboBox, comboBox_1;
 	public JButton BuscarPro, BuscarCM;
-	private JLabel Lespaña;
-	private JLabel Ltmax;
-	private JLabel Ltmin;
-	private JLabel CAandalucia;
-	private JLabel CAvalencia;
-	private JLabel CAbarcelona;
-	private JLabel CAnavarra;
-	private JLabel CApaisv;
-	private JLabel CAasturias;
-	private JLabel CAgalicia;
-	private JLabel CAml;
-	private JLabel CAmurcia;
-	private JLabel CAbaleares;
-	private JLabel CAcanarias;
-	private JLabel CAcantabria;
-	private JLabel CAaragon;
-	private JLabel CAlarioja;
-	private JLabel Ahuelva;
-	private JLabel Asevilla;
-	private JLabel Acordoba;
-	private JLabel Ajaen;
-	private JLabel Agranada;
-	private JLabel Aalmeria;
-	private JLabel Amalaga;
-	private JLabel Acadiz;
-	private JLabel Valicante;
-	private JLabel Vvalencia;
-	private JLabel Vcastellon;
-	private JLabel Clerida;
-	private JLabel Ctarragona;
-	private JLabel Cbarcelona;
-	private JLabel Cgerona;
-	private JLabel Ecaceres;
-	private JLabel Ebadajoz;
-	private JLabel Glacoruña;
-	private JLabel Gpontebedra;
-	private JLabel Glugo;
-	private JLabel Gorense;
-	private JLabel Mmadrid;
-	private JLabel Mmurcia;
-	private JLabel Npamplona;
-	private JLabel PValava;
-	private JLabel PVguipuzcua;
-	private JLabel PVvizcaya;
-	private JLabel LRlogroño;
-	private JLabel Atreruel;
-	private JLabel Azaragoza;
-	private JLabel Ahuesca;
-	private JLabel Aoviedo;
-	private JLabel Bibiza;
-	private JLabel Bformentera;
-	private JLabel Bcabrera;
-	private JLabel Bmallorca;
-	private JLabel Bmenorca;
-	private JLabel Cpalma;
-	private JLabel Chierro;
-	private JLabel Cgomera;
-	private JLabel Ctenerife;
-	private JLabel Ccanaria;
-	private JLabel Cfuenteventura;
-	private JLabel Clanzarote;
+	public JLabel Lespaña, Ltmax, Ltmin, CAandalucia, CAvalencia, CAbarcelona, CAnavarra
+	, CApaisv, CAasturias, CAgalicia, CAml, CAmurcia, CAbaleares, CAcanarias, CAcantabria, CAaragon, CAlarioja, Ahuelva, Asevilla, Acordoba, Ajaen, Agranada, Aalmeria, Amalaga, Acadiz, Valicante
+	, Vvalencia, Vcastellon, Clerida, Ctarragona, Cbarcelona, Cgerona , Ecaceres, Ebadajoz, Glacoruña, Gpontebedra, Glugo, Gorense, Mmadrid, Mmurcia, Npamplona, PValava, PVguipuzcua, PVvizcaya, LRlogroño,
+	Atreruel, Azaragoza, Ahuesca, Aoviedo, Bibiza, Bformentera, Bcabrera, Bmallorca, Bmenorca, Cpalma, Chierro, Cgomera, Ctenerife, Ccanaria, Cfuenteventura, Clanzarote, DatoTemMin, DatoTemMax
+	, Ccantabria, CMtoledo, CMciudadreal, CMalbacete, CMcuenca, CMguadalajara, CLzamora, CLsalamanca, CLavila, CLsegovia, CLsoria, CLburgos, CLpalenccia, CLleon, CAmadrid, CAcm, CAextremadura;
 
 
 	/**
@@ -126,7 +71,7 @@ public class Vista extends JFrame {
 		contentPane.add(Mapa);
 		Mapa.setLayout(null);
 		
-		JLabel CAextremadura = new JLabel("");
+		CAextremadura = new JLabel("");
 		CAextremadura.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
 		CAextremadura.setBounds(216, 214, 50, 60);
 		Mapa.add(CAextremadura);
@@ -136,12 +81,12 @@ public class Vista extends JFrame {
 		CAandalucia.setBounds(246, 345, 50, 60);
 		Mapa.add(CAandalucia);
 		
-		JLabel CAcm = new JLabel("");
+		CAcm = new JLabel("");
 		CAcm.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
 		CAcm.setBounds(304, 214, 50, 60);
 		Mapa.add(CAcm);
 		
-		JLabel CAmadrid = new JLabel("");
+		CAmadrid = new JLabel("");
 		CAmadrid.setIcon(new ImageIcon("C:\\Users\\alvar\\git\\Meteo_AlvaroAlfonso\\T2_AlvaroGuzmanAlfonso\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
 		CAmadrid.setBounds(304, 154, 50, 60);
 		Mapa.add(CAmadrid);
@@ -524,35 +469,35 @@ public class Vista extends JFrame {
 		contentPane.add(CL);
 		CL.setVisible(false);
 		
-		JLabel CLleon = new JLabel("");
+		CLleon = new JLabel("");
 		CLleon.setBounds(199, 68, 50, 60);
 		CL.add(CLleon);
 		
-		JLabel CLpalenccia = new JLabel("");
+		CLpalenccia = new JLabel("");
 		CLpalenccia.setBounds(280, 84, 50, 60);
 		CL.add(CLpalenccia);
 		
-		JLabel CLburgos = new JLabel("");
+		CLburgos = new JLabel("");
 		CLburgos.setBounds(402, 167, 50, 60);
 		CL.add(CLburgos);
 		
-		JLabel CLsoria = new JLabel("");
+		CLsoria = new JLabel("");
 		CLsoria.setBounds(463, 229, 50, 60);
 		CL.add(CLsoria);
 		
-		JLabel CLsegovia = new JLabel("");
+		CLsegovia = new JLabel("");
 		CLsegovia.setBounds(325, 321, 50, 60);
 		CL.add(CLsegovia);
 		
-		JLabel CLavila = new JLabel("");
+		CLavila = new JLabel("");
 		CLavila.setBounds(247, 347, 50, 60);
 		CL.add(CLavila);
 		
-		JLabel CLsalamanca = new JLabel("");
+		CLsalamanca = new JLabel("");
 		CLsalamanca.setBounds(57, 374, 50, 60);
 		CL.add(CLsalamanca);
 		
-		JLabel CLzamora = new JLabel("");
+		CLzamora = new JLabel("");
 		CLzamora.setBounds(135, 244, 50, 60);
 		CL.add(CLzamora);
 		
@@ -567,23 +512,23 @@ public class Vista extends JFrame {
 		CM.setBounds(234, 0, 650, 500);
 		contentPane.add(CM);
 		
-		JLabel CMguadalajara = new JLabel("");
+		CMguadalajara = new JLabel("");
 		CMguadalajara.setBounds(323, 97, 50, 60);
 		CM.add(CMguadalajara);
 		
-		JLabel CMcuenca = new JLabel("");
+		CMcuenca = new JLabel("");
 		CMcuenca.setBounds(367, 217, 50, 60);
 		CM.add(CMcuenca);
 		
-		JLabel CMalbacete = new JLabel("");
+		CMalbacete = new JLabel("");
 		CMalbacete.setBounds(415, 379, 50, 60);
 		CM.add(CMalbacete);
 		
-		JLabel CMciudadreal = new JLabel("");
+		CMciudadreal = new JLabel("");
 		CMciudadreal.setBounds(276, 336, 50, 60);
 		CM.add(CMciudadreal);
 		
-		JLabel CMtoledo = new JLabel("");
+		CMtoledo = new JLabel("");
 		CMtoledo.setBounds(115, 200, 50, 60);
 		CM.add(CMtoledo);
 		
@@ -599,7 +544,7 @@ public class Vista extends JFrame {
 		contentPane.add(Cantabria);
 		Cantabria.setVisible(false);
 		
-		JLabel Ccantabria = new JLabel("");
+		Ccantabria = new JLabel("");
 		Ccantabria.setBounds(287, 151, 50, 60);
 		Cantabria.add(Ccantabria);
 		
@@ -659,7 +604,7 @@ public class Vista extends JFrame {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel DatoTemMax = new JLabel("");
+		DatoTemMax = new JLabel("");
 		DatoTemMax.setBackground(new Color(243, 182, 90));
 		DatoTemMax.setForeground(new Color(0, 0, 0));
 		DatoTemMax.setFont(new Font("Times New Roman", Font.PLAIN, 24));
@@ -703,7 +648,7 @@ public class Vista extends JFrame {
 		Ltmin.setBounds(550, 11, 188, 39);
 		panel_1.add(Ltmin);
 		
-		JLabel DatoTemMin = new JLabel("");
+		DatoTemMin = new JLabel("");
 		DatoTemMin.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		DatoTemMin.setBounds(550, 61, 162, 39);
 		panel_1.add(DatoTemMin);

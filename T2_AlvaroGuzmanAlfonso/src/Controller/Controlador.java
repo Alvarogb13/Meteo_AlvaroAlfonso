@@ -31,11 +31,12 @@ public class Controlador implements ActionListener {
 		public Controlador(Vista frame) {
 			vista = frame;
 			this.vista.BuscarCM.addActionListener(this);
+			this.vista.BuscarCM.addActionListener(this);
 		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			int numero;
+			int numero, numero2;
 			if (e.getSource() == this.vista.BuscarCM) {
 				numero=vista.comboBox.getSelectedIndex();
 				if (numero == 1) {
@@ -221,4 +222,7 @@ public class Controlador implements ActionListener {
 
 	        return pronosticos;
 	    }
+	    public static void main(String[] args) {
+	    	
+		}
 }
