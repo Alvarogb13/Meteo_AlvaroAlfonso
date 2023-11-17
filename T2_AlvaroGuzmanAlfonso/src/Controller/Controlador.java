@@ -228,70 +228,7 @@ public class Controlador implements ActionListener {
 
 	
 
-	static ArrayList<String> Baleares = new ArrayList<>();
-	static ArrayList<String> Canarias = new ArrayList<>();
-	static ArrayList<String> CastillaLeon = new ArrayList<>();
-	static ArrayList<String> CastillaMancha = new ArrayList<>();
-	static ArrayList<String> Cataluña = new ArrayList<>();
-	static ArrayList<String> Estremadura = new ArrayList<>();
-	static ArrayList<String> Galicia = new ArrayList<>();
-	static ArrayList<String> Navarra = new ArrayList<>();
-	static ArrayList<String> PaisVasco = new ArrayList<>();
-	static ArrayList<String> Aragon = new ArrayList<>();
 	
-	public static void main(String[] args) {
-
-		
-		Baleares.add("Ibiza");
-		Baleares.add("Formentera");
-		Baleares.add("Cabrera");
-		Baleares.add("Mallorca");
-		Baleares.add("Menorca");
-		
-		Canarias.add("La Palma");
-		Canarias.add("Gomera");
-		Canarias.add("Hierro");
-		Canarias.add("Tenerife");
-		Canarias.add("Gran Canaria");
-		Canarias.add("Lanzarote");
-		Canarias.add("Fuenteventura");
-		
-		CastillaLeon.add("Leon");
-		CastillaLeon.add("Palencia");
-		CastillaLeon.add("Burgos");
-		CastillaLeon.add("Zamora");
-		CastillaLeon.add("Salamanca");
-		CastillaLeon.add("Avila");
-		CastillaLeon.add("Segovia");
-		CastillaLeon.add("Valladolid");
-		CastillaLeon.add("Soria");
-		
-		CastillaMancha.add("Toledo");
-		CastillaMancha.add("Cuenca");
-		CastillaMancha.add("Ciudad Real");
-		CastillaMancha.add("Albacete");
-		CastillaMancha.add("Guadalajara");
-		
-		Cataluña.add("Lerida");
-		Cataluña.add("Tarragona");
-		Cataluña.add("Barcelona");
-		Cataluña.add("Gerona");
-		
-		Estremadura.add("Caceres");
-		Estremadura.add("Badajoz");
-		
-		Galicia.add("La Coruña");
-		Galicia.add("Lugo");
-		Galicia.add("Pontevedra");
-		Galicia.add("Orense");
-		
-		PaisVasco.add("Vizcaya");
-		PaisVasco.add("Guipuzcua");
-		PaisVasco.add("Alava");
-		
-		Aragon.add("Huesca");
-		Aragon.add("Zaragoza");
-		Aragon.add("Teruel");
 		
 		
 		
@@ -299,4 +236,4 @@ public class Controlador implements ActionListener {
 	
 	
 
-}
+
