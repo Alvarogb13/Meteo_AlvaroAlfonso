@@ -45,7 +45,7 @@ public class Controlador implements ActionListener {
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
-					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "HUELVA", "SEVILLA", "CADIZ", "MALAGA", "CORDOBA", "JAEN", "GRANADA", "ALMAERIA"}));
+					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "HUELVA", "SEVILLA", "CADIZ", "MALAGA", "CORDOBA", "JAEN", "GRANADA", "ALMERIA"}));
 					
 				} else if (numero == 2) {
 					vista.Valencia.setVisible(true);
@@ -70,7 +70,7 @@ public class Controlador implements ActionListener {
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
 					vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
-					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "LA CORUÑA", "ORENSE", "LUGO", "PONTEVEDRA"}));
+					vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "LA CORUNIA", "ORENSE", "LUGO", "PONTEVEDRA"}));
 				} else if (numero == 6) {
 					vista.Madrid.setVisible(true);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
@@ -281,7 +281,7 @@ public class Controlador implements ActionListener {
 		Extremadura.add("Caceres");
 		Extremadura.add("Badajoz");
 		
-		Galicia.add("La Coruña");
+		Galicia.add("La Corunia");
 		Galicia.add("Lugo");
 		Galicia.add("Pontevedra");
 		Galicia.add("Orense");
