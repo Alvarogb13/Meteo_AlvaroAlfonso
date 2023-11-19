@@ -184,7 +184,7 @@ public class Controlador implements ActionListener {
 	            //    String jsonCiudadString = configuracion.getProperty(nombreCiudad);
 	            //    JsonObject jsonCiudad = JsonParser.parseString(jsonCiudadString).getAsJsonObject();
 
-	            //    Ciudad ciudad = gson.fromJson(jsonCiudad, Ciudad.class);
+	             //  Ciudad ciudad = gson.fromJson(jsonCiudad, Ciudad.class);
 	              //  ciudades.add(ciudad);
 	           // }
 	      //  } catch (IOException e) {
