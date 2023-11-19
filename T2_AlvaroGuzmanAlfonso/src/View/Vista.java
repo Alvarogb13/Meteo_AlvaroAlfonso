@@ -71,11 +71,6 @@ public class Vista extends JFrame{
 		contentPane.setLayout(null);
 		//Aqui tenemos que hacer un refactor y poner la ruta relativa Alvaro porque no me salen las imagenes, el refactor es con control F le pones lo que quieres cambiar (la ruta de abajo hasta antes de Imagenes con la ruta relativa que sera .//src//Imagenes//nombre.png o sin el punto al principio, de todas maneras eso lo vemos luego np
 		Mapa = new JPanel();
-		
-		//PRUEBA HUMILDE DEL METODO DE OBTENER PRONOSTICO EN LA INTERFAS CON ESTE TEXTAREA
-		textAreaPrueba = new JTextArea();
-		textAreaPrueba.setBounds(120, 115, 5, 22);
-		Mapa.add(textAreaPrueba);
 
 		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
 		Mapa.setBounds(234, 0, 650, 500);
@@ -83,93 +78,93 @@ public class Vista extends JFrame{
 		Mapa.setLayout(null);
 		
 		CAextremadura = new JLabel("");
-		CAextremadura.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAextremadura.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAextremadura.setBounds(216, 214, 50, 60);
 		Mapa.add(CAextremadura);
 		
 		CAandalucia = new JLabel("");
-		CAandalucia.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAandalucia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAandalucia.setBounds(246, 345, 50, 60);
 		Mapa.add(CAandalucia);
 		
 		CAcm = new JLabel("");
-		CAcm.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAcm.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAcm.setBounds(304, 214, 50, 60);
 		Mapa.add(CAcm);
 		
 		CAmadrid = new JLabel("");
-		CAmadrid.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAmadrid.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAmadrid.setBounds(304, 154, 50, 60);
 		Mapa.add(CAmadrid);
 		
 		CAvalencia = new JLabel("");
-		CAvalencia.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAvalencia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAvalencia.setBounds(419, 232, 50, 60);
 		Mapa.add(CAvalencia);
 		
 		CAbarcelona = new JLabel("");
-		CAbarcelona.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAbarcelona.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAbarcelona.setBounds(527, 102, 50, 60);
 		Mapa.add(CAbarcelona);
 		
 		CAnavarra = new JLabel("");
-		CAnavarra.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAnavarra.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAnavarra.setBounds(341, 32, 50, 60);
 		Mapa.add(CAnavarra);
 		
 		CApaisv = new JLabel("");
-		CApaisv.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CApaisv.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CApaisv.setBounds(391, 11, 50, 60);
 		Mapa.add(CApaisv);
 		
 		CAasturias = new JLabel("");
-		CAasturias.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAasturias.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAasturias.setBounds(216, 0, 50, 60);
 		Mapa.add(CAasturias);
 		
 		CAgalicia = new JLabel("");
-		CAgalicia.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAgalicia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAgalicia.setBounds(108, 11, 50, 60);
 		Mapa.add(CAgalicia);
 		
 		CAml = new JLabel("");
-		CAml.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAml.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAml.setBounds(259, 115, 50, 60);
 		Mapa.add(CAml);
 		
 		CAmurcia = new JLabel("");
-		CAmurcia.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAmurcia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAmurcia.setBounds(391, 311, 50, 60);
 		Mapa.add(CAmurcia);
 		
 		CAbaleares = new JLabel("");
-		CAbaleares.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAbaleares.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAbaleares.setBounds(562, 214, 50, 60);
 		Mapa.add(CAbaleares);
 		
 		CAcanarias = new JLabel("");
-		CAcanarias.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAcanarias.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAcanarias.setBounds(64, 429, 50, 60);
 		Mapa.add(CAcanarias);
 		
 		CAcantabria = new JLabel("");
-		CAcantabria.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAcantabria.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAcantabria.setBounds(281, 11, 50, 60);
 		Mapa.add(CAcantabria);
 		
 		CAaragon = new JLabel("");
-		CAaragon.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAaragon.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAaragon.setBounds(406, 102, 50, 60);
 		Mapa.add(CAaragon);
 		
 		CAlarioja = new JLabel("");
-		CAlarioja.setIcon(new ImageIcon("src\\Imagenes\\Captura de pantalla 2023-11-16 095534.png"));
+		CAlarioja.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
 		CAlarioja.setBounds(351, 69, 50, 60);
 		Mapa.add(CAlarioja);
 		
 		mapa = new JLabel("");
 		mapa.setBackground(new Color(255, 255, 255));
-		mapa.setIcon(new ImageIcon("src\\Imagenes\\espagne.png"));
+		mapa.setIcon(new ImageIcon("Imagenes/espagne.png"));
 		mapa.setBounds(0, 0, 650, 500);
 		Mapa.add(mapa);
 		
@@ -209,7 +204,7 @@ public class Vista extends JFrame{
 		Canarias.add(Clanzarote);
 		
 		Lcanarias = new JLabel("");
-		Lcanarias.setIcon(new ImageIcon("src\\Imagenes\\canaries.png"));
+		Lcanarias.setIcon(new ImageIcon("Imagenes/canaries.png"));
 		Lcanarias.setBounds(0, 0, 650, 500);
 		Canarias.add(Lcanarias);
 		
@@ -241,7 +236,7 @@ public class Vista extends JFrame{
 		Baleares.add(Bmenorca);
 		
 		Lbaleares = new JLabel("");
-		Lbaleares.setIcon(new ImageIcon("src\\Imagenes\\baleares.png"));
+		Lbaleares.setIcon(new ImageIcon("Imagenes/baleares.png"));
 		Lbaleares.setBounds(0, 0, 650, 500);
 		Baleares.add(Lbaleares);
 		
@@ -257,7 +252,7 @@ public class Vista extends JFrame{
 		Asturias.add(Aoviedo);
 		
 		Lasturias = new JLabel("");
-		Lasturias.setIcon(new ImageIcon("src\\Imagenes\\asturies.png"));
+		Lasturias.setIcon(new ImageIcon("Imagenes/asturies.png"));
 		Lasturias.setBounds(0, 0, 650, 500);
 		Asturias.add(Lasturias);
 		
@@ -281,7 +276,7 @@ public class Vista extends JFrame{
 		Aragon.add(Ahuesca);
 		
 		Laragon = new JLabel("");
-		Laragon.setIcon(new ImageIcon("src\\Imagenes\\aragon.png"));
+		Laragon.setIcon(new ImageIcon("srcImagenes/aragon.png"));
 		Laragon.setBounds(0, 0, 650, 500);
 		Aragon.add(Laragon);
 		
@@ -297,7 +292,7 @@ public class Vista extends JFrame{
 		LaRioja.add(LRlogroño);
 		
 		Llarioja = new JLabel("");
-		Llarioja.setIcon(new ImageIcon("src\\Imagenes\\rioja.png"));
+		Llarioja.setIcon(new ImageIcon("Imagenes/rioja.png"));
 		Llarioja.setBounds(0, 0, 650, 500);
 		LaRioja.add(Llarioja);
 		
@@ -321,7 +316,7 @@ public class Vista extends JFrame{
 		Pais_Vasco.add(PVvizcaya);
 		
 		Lpais_vasco = new JLabel("");
-		Lpais_vasco.setIcon(new ImageIcon("src\\Imagenes\\paysbasque.png"));
+		Lpais_vasco.setIcon(new ImageIcon("Imagenes/paysbasque.png"));
 		Lpais_vasco.setBounds(0, 0, 650, 500);
 		Pais_Vasco.add(Lpais_vasco);
 		
@@ -337,7 +332,7 @@ public class Vista extends JFrame{
 		Navarra.add(Npamplona);
 		
 		Lnavarra = new JLabel("");
-		Lnavarra.setIcon(new ImageIcon("src\\Imagenes\\navarre.png"));
+		Lnavarra.setIcon(new ImageIcon("Imagenes/navarre.png"));
 		Lnavarra.setBounds(0, 0, 650, 500);
 		Navarra.add(Lnavarra);
 		
@@ -353,7 +348,7 @@ public class Vista extends JFrame{
 		Murcia.add(Mmurcia);
 		
 		Lmurcia = new JLabel("");
-		Lmurcia.setIcon(new ImageIcon("src\\Imagenes\\murcie.png"));
+		Lmurcia.setIcon(new ImageIcon("Imagenes/murcie.png"));
 		Lmurcia.setBounds(0, 0, 650, 500);
 		Murcia.add(Lmurcia);
 		
@@ -369,7 +364,7 @@ public class Vista extends JFrame{
 		Madrid.add(Mmadrid);
 		
 		Lmadrid = new JLabel("");
-		Lmadrid.setIcon(new ImageIcon("src\\Imagenes\\madrid.png"));
+		Lmadrid.setIcon(new ImageIcon("Imagenes/madrid.png"));
 		Lmadrid.setBounds(0, 0, 650, 500);
 		Madrid.add(Lmadrid);
 		
@@ -397,7 +392,7 @@ public class Vista extends JFrame{
 		Galicia.add(Gorense);
 		
 		Lgalicia = new JLabel("");
-		Lgalicia.setIcon(new ImageIcon("src\\Imagenes\\galice.png"));
+		Lgalicia.setIcon(new ImageIcon("Imagenes/galice.png"));
 		Lgalicia.setBounds(0, 0, 650, 500);
 		Galicia.add(Lgalicia);
 		
@@ -417,7 +412,7 @@ public class Vista extends JFrame{
 		Extremadura.add(Ebadajoz);
 		
 		Lextremadura = new JLabel("");
-		Lextremadura.setIcon(new ImageIcon("src\\Imagenes\\estremadure.png"));
+		Lextremadura.setIcon(new ImageIcon("Imagenes/estremadure.png"));
 		Lextremadura.setBounds(0, 0, 650, 500);
 		Extremadura.add(Lextremadura);
 		
@@ -445,7 +440,7 @@ public class Vista extends JFrame{
 		Catalunia.add(Cgerona);
 		
 		LCatalunia = new JLabel("");
-		LCatalunia.setIcon(new ImageIcon("src\\Imagenes\\catalogne.png"));
+		LCatalunia.setIcon(new ImageIcon("Imagenes/catalogne.png"));
 		LCatalunia.setBounds(0, 0, 650, 500);
 		Catalunia.add(LCatalunia);
 		
@@ -469,7 +464,7 @@ public class Vista extends JFrame{
 		Valencia.add(Vcastellon);
 		
 		Lvalencia = new JLabel("");
-		Lvalencia.setIcon(new ImageIcon("src\\Imagenes\\valence.png"));
+		Lvalencia.setIcon(new ImageIcon("Imagenes/valence.png"));
 		Lvalencia.setBounds(0, 0, 650, 500);
 		Valencia.add(Lvalencia);
 		
@@ -513,7 +508,7 @@ public class Vista extends JFrame{
 		CL.add(CLzamora);
 		
 		Lcl = new JLabel("");
-		Lcl.setIcon(new ImageIcon("src\\Imagenes\\castilleleon.png"));
+		Lcl.setIcon(new ImageIcon("Imagenes/castilleleon.png"));
 		Lcl.setBounds(0, 0, 650, 500);
 		CL.add(Lcl);
 		
@@ -544,7 +539,7 @@ public class Vista extends JFrame{
 		CM.add(CMtoledo);
 		
 		LCastillaM = new JLabel("");
-		LCastillaM.setIcon(new ImageIcon("src\\Imagenes\\castillemancha.png"));
+		LCastillaM.setIcon(new ImageIcon("Imagenes/castillemancha.png"));
 		LCastillaM.setBounds(0, 0, 650, 500);
 		CM.add(LCastillaM);
 		
@@ -560,7 +555,7 @@ public class Vista extends JFrame{
 		Cantabria.add(Ccantabria);
 		
 		LCantabria = new JLabel("");
-		LCantabria.setIcon(new ImageIcon("src\\Imagenes\\cantabrie.png"));
+		LCantabria.setIcon(new ImageIcon("Imagenes/cantabrie.png"));
 		LCantabria.setBounds(0, 0, 650, 500);
 		Cantabria.add(LCantabria);
 		
@@ -604,7 +599,7 @@ public class Vista extends JFrame{
 		andalucia.add(Acadiz);
 		
 		Landalucia = new JLabel("");
-		Landalucia.setIcon(new ImageIcon("src\\Imagenes\\andalousie.jpg"));
+		Landalucia.setIcon(new ImageIcon("Imagenes/andalousie.jpg"));
 		Landalucia.setBounds(0, 0, 650, 500);
 		andalucia.add(Landalucia);
 		
@@ -635,12 +630,12 @@ public class Vista extends JFrame{
 		panel_1.add(comboBox_1);
 		
 		BuscarPro = new JButton("");
-		BuscarPro.setIcon(new ImageIcon("src\\Imagenes\\TIK.png"));
+		BuscarPro.setIcon(new ImageIcon("Imagenes/TIK.png"));
 		BuscarPro.setBounds(208, 111, 40, 40);
 		panel_1.add(BuscarPro);
 		
 		BuscarCM = new JButton("");
-		BuscarCM.setIcon(new ImageIcon("src\\Imagenes\\TIK.png"));
+		BuscarCM.setIcon(new ImageIcon("Imagenes/TIK.png"));
 		BuscarCM.setBounds(208, 60, 40, 40);
 		panel_1.add(BuscarCM);
 		
@@ -663,6 +658,11 @@ public class Vista extends JFrame{
 		DatoTemMin.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		DatoTemMin.setBounds(550, 61, 162, 39);
 		panel_1.add(DatoTemMin);
+		
+		//PRUEBA HUMILDE DEL METODO DE OBTENER PRONOSTICO EN LA INTERFAS CON ESTE TEXTAREA
+		textAreaPrueba = new JTextArea();
+		textAreaPrueba.setBounds(318, 111, 349, 106);
+		panel_1.add(textAreaPrueba);
 		
 		panel_2 = new JPanel();
 		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
