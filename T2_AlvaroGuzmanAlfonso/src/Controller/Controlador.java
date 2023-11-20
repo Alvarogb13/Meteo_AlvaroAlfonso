@@ -281,5 +281,3 @@ public class Controlador implements ActionListener {
 			}
 	}
 }
-
-
