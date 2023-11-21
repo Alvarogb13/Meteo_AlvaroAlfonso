@@ -543,23 +543,44 @@ public class Controlador implements ActionListener {
 				e1.printStackTrace();
 			}
 		}
+		//Vista de los diferentes dias que queremoh ver
 		if (e.getSource() == this.vista.Dia1) {
 			int Dia = 0;
+			try {
+				makeSound("src/sounds/boton.wav");
+			} catch (InterruptedException e1) {
+				System.out.println("Error al reproducir el sonidete");
+			}
 			LocalDate fecha = LocalDate.now();
 			dias(Dia, fecha);
 		}
 		if (e.getSource() == this.vista.Dia2) {
 			int Dia = 1;
+			try {
+				makeSound("src/sounds/boton.wav");
+			} catch (InterruptedException e1) {
+				System.out.println("Error al reproducir el sonidete");
+			}
 			LocalDate fecha = LocalDate.now().plusDays(1);
 			dias(Dia, fecha);
 		}
 		if (e.getSource() == this.vista.Dia3) {
 			int Dia = 2;
+			try {
+				makeSound("src/sounds/boton.wav");
+			} catch (InterruptedException e1) {
+				System.out.println("Error al reproducir el sonidete");
+			}
 			LocalDate fecha = LocalDate.now().plusDays(2);
 			dias(Dia, fecha);
 		}
 		if (e.getSource() == this.vista.Dia4) {
 			int Dia = 3;
+			try {
+				makeSound("src/sounds/boton.wav");
+			} catch (InterruptedException e1) {
+				System.out.println("Error al reproducir el sonidete");
+			}
 			LocalDate fecha = LocalDate.now().plusDays(3);
 			dias(Dia, fecha);
 		}
