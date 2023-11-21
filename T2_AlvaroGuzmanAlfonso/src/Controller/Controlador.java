@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
 import java.net.http.HttpClient;
@@ -546,7 +547,6 @@ public class Controlador implements ActionListener {
 				System.err.println("Selecciona una provincia valida porfavore");
 			}
 		}
-		//Vista de los diferentes dias que queremoh ver
 		if (e.getSource() == this.vista.Dia1) {
 			int dia = 0;
 			try {
@@ -765,7 +765,20 @@ public class Controlador implements ActionListener {
 			imagen = "Imagenes/Lluvia débil.png";
 		} else if (timepo.equalsIgnoreCase("Chubascos dispersos")) {
 			imagen = "Imagenes/Chubascos dispersos.png";
-		}
+		} else if(timepo.equalsIgnoreCase("Humo")) {
+			imagen = "Imagenes/Humo.png";
+		} else if(timepo.equalsIgnoreCase("Calima")) {
+			imagen = "Imagenes/Calima.png";
+		} else if(timepo.equalsIgnoreCase("Caluroso")) {
+			imagen = "Imagenes/Caluroso.png";
+		} else if(timepo.equalsIgnoreCase("Tempestad de arena")) {
+			imagen = "Imagenes/Tempestad de arena.png";
+		} else if(timepo.equalsIgnoreCase("Ventisca alta")) {
+			imagen = "Imagenes/Ventisca alta.png";
+		} else if(timepo.equalsIgnoreCase("Lluvia engelante")) {
+			imagen = "Imagenes/Lluvia engelante.png";
+		} 
+		
 		return imagen;
 	}
 
