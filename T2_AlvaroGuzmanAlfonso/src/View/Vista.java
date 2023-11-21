@@ -77,6 +77,7 @@ public class Vista extends JFrame{
 	 */
 	public Vista() {
 
+		setTitle("NombreProvisional");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1550, 808);
 		contentPane = new JPanel();
