@@ -25,19 +25,34 @@ import java.awt.event.ActionEvent;
 public class Vista extends JFrame{
 	
 	public JPanel Baleares, contentPane, andalucia, Mapa, CL, Valencia, Catalunia, Cantabria
-	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, panel_1, panel_3, panel_2, CM;
+	, Extremadura, Galicia, Madrid, Murcia, Navarra, Pais_Vasco, LaRioja, Aragon, Asturias, Canarias, mando, CM;
 	public JLabel Lasturias, Llarioja, Lpais_vasco, Lnavarra, Lmurcia, Lmadrid, Lextremadura, Lvalencia, Lcl, mapa, Landalucia, Lbaleares, LCatalunia, Lgalicia, Laragon, Lcanarias, LCastillaM
 	, LCantabria;
 	public JComboBox comboBox, comboBox_1;
 	public JButton BuscarPro, BuscarCM;
-	public JLabel Lespaña, Ltmax, Ltmin, CAandalucia, CAvalencia, CAbarcelona, CAnavarra
+	public JLabel CAandalucia, CAvalencia, CAbarcelona, CAnavarra
 	, CApaisv, CAasturias, CAgalicia, CAml, CAmurcia, CAbaleares, CAcanarias, CAcantabria, CAaragon, CAlarioja, Ahuelva, Asevilla, Acordoba, Ajaen, Agranada, Aalmeria, Amalaga, Acadiz, Valicante
 	, Vvalencia, Vcastellon, Clerida, Ctarragona, Cbarcelona, Cgerona , Ecaceres, Ebadajoz, Glacoruña, Gpontebedra, Glugo, Gorense, Mmadrid, Mmurcia, Npamplona, PValava, PVguipuzcua, PVvizcaya, LRlogroño,
-	Atreruel, Azaragoza, Ahuesca, Aoviedo, Bibiza, Bformentera, Bcabrera, Bmallorca, Bmenorca, Cpalma, Chierro, Cgomera, Ctenerife, Ccanaria, Cfuenteventura, Clanzarote, DatoTemMin, DatoTemMax
-	, Ccantabria, CMtoledo, CMciudadreal, CMalbacete, CMcuenca, CMguadalajara, CLzamora, CLsalamanca, CLavila, CLsegovia, CLsoria, CLburgos, CLpalencia, CLleon, CAmadrid, CAcm, CAextremadura;
-	
-	//EJEMPLO PARA FUNCIONALIDAD A VER SI FUNSIONA
-	public JTextArea textAreaPrueba;
+	Atreruel, Azaragoza, Ahuesca, Aoviedo, Bibiza, Bformentera, Bcabrera, Bmallorca, Bmenorca, Cpalma, Chierro, Cgomera, Ctenerife, Ccanaria, Cfuenteventura, Clanzarote
+	, Ccantabria, CMtoledo, CMciudadreal, CMalbacete, CMcuenca, CMguadalajara, CLzamora, CLsalamanca, CLavila, CLsegovia, CLsoria, CLburgos, CLpalencia, CLleon, CAmadrid, CAcm, CAextremadura, CLvalladolid;
+	public JLabel lblNewLabel_1;
+	public JLabel Tele;
+	public JLabel lblNewLabel;
+	public JButton Encender;
+	public JPanel panel;
+	public JLabel lblNewLabel_2;
+	public JLabel Tiempecito;
+	public JLabel lblNewLabel_4;
+	public JLabel lblNewLabel_5;
+	public JLabel TemMin;
+	public JLabel TemMax;
+	public JLabel lblNewLabel_3;
+	public JButton Dia4;
+	public JButton Dia3;
+	public JButton Dia2;
+	public JButton Dia1;
+	public JLabel lblNewLabel_5_1;
+	public JLabel Fecha;
 
 
 	/**
@@ -63,227 +78,281 @@ public class Vista extends JFrame{
 	public Vista() {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 900, 800);
+		setBounds(100, 100, 1550, 808);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		//Aqui tenemos que hacer un refactor y poner la ruta relativa Alvaro porque no me salen las imagenes, el refactor es con control F le pones lo que quieres cambiar (la ruta de abajo hasta antes de Imagenes con la ruta relativa que sera .//src//Imagenes//nombre.png o sin el punto al principio, de todas maneras eso lo vemos luego np
-		Mapa = new JPanel();
-
-		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Mapa.setBounds(234, 0, 650, 500);
-		contentPane.add(Mapa);
-		Mapa.setLayout(null);
 		
-		CAextremadura = new JLabel("");
-		CAextremadura.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAextremadura.setBounds(216, 214, 50, 60);
-		Mapa.add(CAextremadura);
+		andalucia = new JPanel();
+		andalucia.setLayout(null);
+		andalucia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		andalucia.setBounds(95, 115, 674, 554);
+		contentPane.add(andalucia);
+		andalucia.setVisible(false);
 		
-		CAandalucia = new JLabel("");
-		CAandalucia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAandalucia.setBounds(246, 345, 50, 60);
-		Mapa.add(CAandalucia);
+		Ahuelva = new JLabel("");
+		Ahuelva.setBounds(84, 253, 50, 60);
+		andalucia.add(Ahuelva);
 		
-		CAcm = new JLabel("");
-		CAcm.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAcm.setBounds(304, 214, 50, 60);
-		Mapa.add(CAcm);
+		Asevilla = new JLabel("");
+		Asevilla.setBounds(177, 273, 50, 60);
+		andalucia.add(Asevilla);
 		
-		CAmadrid = new JLabel("");
-		CAmadrid.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAmadrid.setBounds(304, 154, 50, 60);
-		Mapa.add(CAmadrid);
+		Acordoba = new JLabel("");
+		Acordoba.setBounds(308, 155, 50, 60);
+		andalucia.add(Acordoba);
 		
-		CAvalencia = new JLabel("");
-		CAvalencia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAvalencia.setBounds(419, 232, 50, 60);
-		Mapa.add(CAvalencia);
+		Ajaen = new JLabel("");
+		Ajaen.setBounds(399, 155, 50, 60);
+		andalucia.add(Ajaen);
 		
-		CAbarcelona = new JLabel("");
-		CAbarcelona.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAbarcelona.setBounds(527, 102, 50, 60);
-		Mapa.add(CAbarcelona);
+		Agranada = new JLabel("");
+		Agranada.setBounds(462, 241, 50, 60);
+		andalucia.add(Agranada);
 		
-		CAnavarra = new JLabel("");
-		CAnavarra.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAnavarra.setBounds(341, 32, 50, 60);
-		Mapa.add(CAnavarra);
+		Aalmeria = new JLabel("");
+		Aalmeria.setBounds(577, 241, 50, 60);
+		andalucia.add(Aalmeria);
 		
-		CApaisv = new JLabel("");
-		CApaisv.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CApaisv.setBounds(391, 11, 50, 60);
-		Mapa.add(CApaisv);
+		Amalaga = new JLabel("");
+		Amalaga.setBounds(277, 369, 50, 60);
+		andalucia.add(Amalaga);
 		
-		CAasturias = new JLabel("");
-		CAasturias.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAasturias.setBounds(216, 0, 50, 60);
-		Mapa.add(CAasturias);
+		Acadiz = new JLabel("");
+		Acadiz.setBounds(177, 421, 50, 60);
+		andalucia.add(Acadiz);
 		
-		CAgalicia = new JLabel("");
-		CAgalicia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAgalicia.setBounds(108, 11, 50, 60);
-		Mapa.add(CAgalicia);
+		Landalucia = new JLabel("");
+		Landalucia.setIcon(new ImageIcon("Imagenes/andalousie.jpg"));
+		Landalucia.setBounds(0, 0, 674, 554);
+		andalucia.add(Landalucia);
 		
-		CAml = new JLabel("");
-		CAml.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAml.setBounds(259, 115, 50, 60);
-		Mapa.add(CAml);
+		Cantabria = new JPanel();
+		Cantabria.setLayout(null);
+		Cantabria.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Cantabria.setBounds(95, 115, 674, 554);
+		contentPane.add(Cantabria);
+		Cantabria.setVisible(false);
 		
-		CAmurcia = new JLabel("");
-		CAmurcia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAmurcia.setBounds(391, 311, 50, 60);
-		Mapa.add(CAmurcia);
+		Ccantabria = new JLabel("");
+		Ccantabria.setBounds(324, 225, 50, 60);
+		Cantabria.add(Ccantabria);
 		
-		CAbaleares = new JLabel("");
-		CAbaleares.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAbaleares.setBounds(562, 214, 50, 60);
-		Mapa.add(CAbaleares);
+		LCantabria = new JLabel("");
+		LCantabria.setIcon(new ImageIcon("Imagenes/cantabrie.png"));
+		LCantabria.setBounds(0, 0, 674, 554);
+		Cantabria.add(LCantabria);
 		
-		CAcanarias = new JLabel("");
-		CAcanarias.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAcanarias.setBounds(64, 429, 50, 60);
-		Mapa.add(CAcanarias);
+		CM = new JPanel();
+		CM.setLayout(null);
+		CM.setBorder(new LineBorder(new Color(0, 0, 0)));
+		CM.setBounds(95, 115, 674, 554);
+		contentPane.add(CM);
+		CM.setVisible(false);
 		
-		CAcantabria = new JLabel("");
-		CAcantabria.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAcantabria.setBounds(281, 11, 50, 60);
-		Mapa.add(CAcantabria);
+		CMguadalajara = new JLabel("");
+		CMguadalajara.setBounds(323, 80, 50, 60);
+		CM.add(CMguadalajara);
 		
-		CAaragon = new JLabel("");
-		CAaragon.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAaragon.setBounds(406, 102, 50, 60);
-		Mapa.add(CAaragon);
+		CMcuenca = new JLabel("");
+		CMcuenca.setBounds(386, 253, 50, 60);
+		CM.add(CMcuenca);
 		
-		CAlarioja = new JLabel("");
-		CAlarioja.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
-		CAlarioja.setBounds(351, 69, 50, 60);
-		Mapa.add(CAlarioja);
+		CMalbacete = new JLabel("");
+		CMalbacete.setBounds(436, 421, 50, 60);
+		CM.add(CMalbacete);
 		
-		mapa = new JLabel("");
-		mapa.setBackground(new Color(255, 255, 255));
-		mapa.setIcon(new ImageIcon("Imagenes/espagne.png"));
-		mapa.setBounds(0, 0, 650, 500);
-		Mapa.add(mapa);
+		CMciudadreal = new JLabel("");
+		CMciudadreal.setBounds(288, 372, 50, 60);
+		CM.add(CMciudadreal);
 		
-		Canarias = new JPanel();
-		Canarias.setLayout(null);
-		Canarias.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Canarias.setBounds(234, 0, 650, 500);
-		contentPane.add(Canarias);
-		Canarias.setVisible(false);
+		CMtoledo = new JLabel("");
+		CMtoledo.setBounds(259, 253, 50, 60);
+		CM.add(CMtoledo);
 		
-		Cpalma = new JLabel("");
-		Cpalma.setBounds(26, 220, 50, 60);
-		Canarias.add(Cpalma);
+		LCastillaM = new JLabel("");
+		LCastillaM.setIcon(new ImageIcon("Imagenes/castillemancha.png"));
+		LCastillaM.setBounds(0, 0, 674, 554);
+		CM.add(LCastillaM);
 		
-		Chierro = new JLabel("");
-		Chierro.setBounds(0, 429, 50, 60);
-		Canarias.add(Chierro);
+		Valencia = new JPanel();
+		Valencia.setLayout(null);
+		Valencia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Valencia.setBounds(95, 115, 674, 554);
+		contentPane.add(Valencia);
+		Valencia.setVisible(false);
 		
-		Cgomera = new JLabel("");
-		Cgomera.setBounds(106, 363, 50, 60);
-		Canarias.add(Cgomera);
+		Valicante = new JLabel("");
+		Valicante.setBounds(130, 169, 50, 60);
+		Valencia.add(Valicante);
 		
-		Ctenerife = new JLabel("");
-		Ctenerife.setBounds(179, 285, 50, 60);
-		Canarias.add(Ctenerife);
+		Vvalencia = new JLabel("");
+		Vvalencia.setBounds(313, 158, 50, 60);
+		Valencia.add(Vvalencia);
 		
-		Ccanaria = new JLabel("");
-		Ccanaria.setBounds(326, 346, 50, 60);
-		Canarias.add(Ccanaria);
+		Vcastellon = new JLabel("");
+		Vcastellon.setBounds(474, 288, 50, 60);
+		Valencia.add(Vcastellon);
 		
-		Cfuenteventura = new JLabel("");
-		Cfuenteventura.setBounds(544, 220, 50, 60);
-		Canarias.add(Cfuenteventura);
+		Lvalencia = new JLabel("");
+		Lvalencia.setIcon(new ImageIcon("Imagenes/valence.png"));
+		Lvalencia.setBounds(0, 0, 674, 554);
+		Valencia.add(Lvalencia);
 		
-		Clanzarote = new JLabel("");
-		Clanzarote.setBounds(579, 91, 50, 60);
-		Canarias.add(Clanzarote);
+		Catalunia = new JPanel();
+		Catalunia.setLayout(null);
+		Catalunia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Catalunia.setBounds(95, 115, 674, 554);
+		contentPane.add(Catalunia);
+		Catalunia.setVisible(false);
 		
-		Lcanarias = new JLabel("");
-		Lcanarias.setIcon(new ImageIcon("Imagenes/canaries.png"));
-		Lcanarias.setBounds(0, 0, 650, 500);
-		Canarias.add(Lcanarias);
+		Clerida = new JLabel("");
+		Clerida.setBounds(184, 211, 50, 60);
+		Catalunia.add(Clerida);
 		
-		Baleares = new JPanel();
-		Baleares.setLayout(null);
-		Baleares.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Baleares.setBounds(234, 0, 650, 500);
-		contentPane.add(Baleares);
-		Baleares.setVisible(false);
+		Ctarragona = new JLabel("");
+		Ctarragona.setBounds(201, 341, 50, 60);
+		Catalunia.add(Ctarragona);
 		
-		Bibiza = new JLabel("");
-		Bibiza.setBounds(31, 346, 50, 60);
-		Baleares.add(Bibiza);
+		Cbarcelona = new JLabel("");
+		Cbarcelona.setBounds(340, 304, 50, 60);
+		Catalunia.add(Cbarcelona);
 		
-		Bformentera = new JLabel("");
-		Bformentera.setBounds(31, 429, 50, 60);
-		Baleares.add(Bformentera);
+		Cgerona = new JLabel("");
+		Cgerona.setBounds(525, 197, 50, 60);
+		Catalunia.add(Cgerona);
 		
-		Bcabrera = new JLabel("");
-		Bcabrera.setBounds(333, 276, 50, 60);
-		Baleares.add(Bcabrera);
+		LCatalunia = new JLabel("");
+		LCatalunia.setIcon(new ImageIcon("Imagenes/catalogne.png"));
+		LCatalunia.setBounds(0, 0, 674, 554);
+		Catalunia.add(LCatalunia);
 		
-		Bmallorca = new JLabel("");
-		Bmallorca.setBounds(333, 98, 50, 60);
-		Baleares.add(Bmallorca);
+		Extremadura = new JPanel();
+		Extremadura.setLayout(null);
+		Extremadura.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Extremadura.setBounds(95, 115, 674, 554);
+		contentPane.add(Extremadura);
+		Extremadura.setVisible(false);
 		
-		Bmenorca = new JLabel("");
-		Bmenorca.setBounds(529, 11, 50, 60);
-		Baleares.add(Bmenorca);
+		Ecaceres = new JLabel("");
+		Ecaceres.setBounds(335, 156, 50, 60);
+		Extremadura.add(Ecaceres);
 		
-		Lbaleares = new JLabel("");
-		Lbaleares.setIcon(new ImageIcon("Imagenes/baleares.png"));
-		Lbaleares.setBounds(0, 0, 650, 500);
-		Baleares.add(Lbaleares);
+		Ebadajoz = new JLabel("");
+		Ebadajoz.setBounds(348, 359, 50, 60);
+		Extremadura.add(Ebadajoz);
 		
-		Asturias = new JPanel();
-		Asturias.setLayout(null);
-		Asturias.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Asturias.setBounds(234, 0, 650, 500);
-		contentPane.add(Asturias);
-		Asturias.setVisible(false);
+		Lextremadura = new JLabel("");
+		Lextremadura.setIcon(new ImageIcon("Imagenes/estremadure.png"));
+		Lextremadura.setBounds(0, 0, 674, 554);
+		Extremadura.add(Lextremadura);
 		
-		Aoviedo = new JLabel("");
-		Aoviedo.setBounds(186, 245, 50, 60);
-		Asturias.add(Aoviedo);
+		Galicia = new JPanel();
+		Galicia.setLayout(null);
+		Galicia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Galicia.setBounds(95, 115, 674, 554);
+		contentPane.add(Galicia);
+		Galicia.setVisible(false);
 		
-		Lasturias = new JLabel("");
-		Lasturias.setIcon(new ImageIcon("Imagenes/asturies.png"));
-		Lasturias.setBounds(0, 0, 650, 500);
-		Asturias.add(Lasturias);
+		Glacoruña = new JLabel("");
+		Glacoruña.setBounds(269, 180, 50, 60);
+		Galicia.add(Glacoruña);
 		
-		Aragon = new JPanel();
-		Aragon.setLayout(null);
-		Aragon.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Aragon.setBounds(234, 0, 650, 500);
-		contentPane.add(Aragon);
-		Aragon.setVisible(false);
+		Gpontebedra = new JLabel("");
+		Gpontebedra.setBounds(196, 370, 50, 60);
+		Galicia.add(Gpontebedra);
 		
-		Atreruel = new JLabel("");
-		Atreruel.setBounds(236, 343, 50, 60);
-		Aragon.add(Atreruel);
+		Glugo = new JLabel("");
+		Glugo.setBounds(422, 260, 50, 60);
+		Galicia.add(Glugo);
 		
-		Azaragoza = new JLabel("");
-		Azaragoza.setBounds(272, 199, 50, 60);
-		Aragon.add(Azaragoza);
+		Gorense = new JLabel("");
+		Gorense.setBounds(362, 416, 50, 60);
+		Galicia.add(Gorense);
 		
-		Ahuesca = new JLabel("");
-		Ahuesca.setBounds(375, 111, 50, 60);
-		Aragon.add(Ahuesca);
+		Lgalicia = new JLabel("");
+		Lgalicia.setIcon(new ImageIcon("Imagenes/galice.png"));
+		Lgalicia.setBounds(0, 0, 674, 554);
+		Galicia.add(Lgalicia);
 		
-		Laragon = new JLabel("");
-		Laragon.setIcon(new ImageIcon("srcImagenes/aragon.png"));
-		Laragon.setBounds(0, 0, 650, 500);
-		Aragon.add(Laragon);
+		Madrid = new JPanel();
+		Madrid.setLayout(null);
+		Madrid.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Madrid.setBounds(95, 115, 674, 554);
+		contentPane.add(Madrid);
+		Madrid.setVisible(false);
+		
+		Mmadrid = new JLabel("");
+		Mmadrid.setBounds(387, 300, 50, 60);
+		Madrid.add(Mmadrid);
+		
+		Lmadrid = new JLabel("");
+		Lmadrid.setIcon(new ImageIcon("Imagenes/madrid.png"));
+		Lmadrid.setBounds(0, 0, 674, 554);
+		Madrid.add(Lmadrid);
+		
+		Murcia = new JPanel();
+		Murcia.setLayout(null);
+		Murcia.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Murcia.setBounds(95, 115, 674, 554);
+		contentPane.add(Murcia);
+		Murcia.setVisible(false);
+		
+		Mmurcia = new JLabel("");
+		Mmurcia.setBounds(387, 316, 50, 60);
+		Murcia.add(Mmurcia);
+		
+		Lmurcia = new JLabel("");
+		Lmurcia.setIcon(new ImageIcon("Imagenes/murcie.png"));
+		Lmurcia.setBounds(0, 0, 674, 554);
+		Murcia.add(Lmurcia);
+		
+		Navarra = new JPanel();
+		Navarra.setLayout(null);
+		Navarra.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Navarra.setBounds(95, 115, 674, 554);
+		contentPane.add(Navarra);
+		Navarra.setVisible(false);
+		
+		Npamplona = new JLabel("");
+		Npamplona.setBounds(294, 273, 50, 60);
+		Navarra.add(Npamplona);
+		
+		Lnavarra = new JLabel("");
+		Lnavarra.setIcon(new ImageIcon("Imagenes/navarre.png"));
+		Lnavarra.setBounds(0, 0, 674, 554);
+		Navarra.add(Lnavarra);
+		
+		Pais_Vasco =new JPanel();
+		Pais_Vasco.setLayout(null);
+		Pais_Vasco.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Pais_Vasco.setBounds(95, 115, 674, 554);
+		contentPane.add(Pais_Vasco);
+		Pais_Vasco.setVisible(false);
+		
+		PValava = new JLabel("");
+		PValava.setBounds(344, 317, 50, 60);
+		Pais_Vasco.add(PValava);
+		
+		PVguipuzcua = new JLabel("");
+		PVguipuzcua.setBounds(417, 228, 50, 60);
+		Pais_Vasco.add(PVguipuzcua);
+		
+		PVvizcaya = new JLabel("");
+		PVvizcaya.setBounds(236, 172, 50, 60);
+		Pais_Vasco.add(PVvizcaya);
+		
+		Lpais_vasco = new JLabel("");
+		Lpais_vasco.setIcon(new ImageIcon("Imagenes/paysbasque.png"));
+		Lpais_vasco.setBounds(0, 0, 674, 554);
+		Pais_Vasco.add(Lpais_vasco);
 		
 		LaRioja = new JPanel();
 		LaRioja.setLayout(null);
 		LaRioja.setBorder(new LineBorder(new Color(0, 0, 0)));
-		LaRioja.setBounds(234, 0, 650, 500);
+		LaRioja.setBounds(95, 115, 674, 554);
 		contentPane.add(LaRioja);
 		LaRioja.setVisible(false);
 		
@@ -293,194 +362,138 @@ public class Vista extends JFrame{
 		
 		Llarioja = new JLabel("");
 		Llarioja.setIcon(new ImageIcon("Imagenes/rioja.png"));
-		Llarioja.setBounds(0, 0, 650, 500);
+		Llarioja.setBounds(0, 0, 674, 554);
 		LaRioja.add(Llarioja);
 		
-		Pais_Vasco = new JPanel();
-		Pais_Vasco.setLayout(null);
-		Pais_Vasco.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Pais_Vasco.setBounds(234, 0, 650, 500);
-		contentPane.add(Pais_Vasco);
-		Pais_Vasco.setVisible(false);
+		Aragon = new JPanel();
+		Aragon.setLayout(null);
+		Aragon.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Aragon.setBounds(95, 115, 674, 554);
+		contentPane.add(Aragon);
+		Aragon.setVisible(false);
 		
-		PValava = new JLabel("");
-		PValava.setBounds(325, 281, 50, 60);
-		Pais_Vasco.add(PValava);
+		Atreruel = new JLabel("");
+		Atreruel.setBounds(240, 384, 50, 60);
+		Aragon.add(Atreruel);
 		
-		PVguipuzcua = new JLabel("");
-		PVguipuzcua.setBounds(363, 190, 50, 60);
-		Pais_Vasco.add(PVguipuzcua);
+		Azaragoza = new JLabel("");
+		Azaragoza.setBounds(292, 215, 50, 60);
+		Aragon.add(Azaragoza);
 		
-		PVvizcaya = new JLabel("");
-		PVvizcaya.setBounds(227, 153, 50, 60);
-		Pais_Vasco.add(PVvizcaya);
+		Ahuesca = new JLabel("");
+		Ahuesca.setBounds(375, 111, 50, 60);
+		Aragon.add(Ahuesca);
 		
-		Lpais_vasco = new JLabel("");
-		Lpais_vasco.setIcon(new ImageIcon("Imagenes/paysbasque.png"));
-		Lpais_vasco.setBounds(0, 0, 650, 500);
-		Pais_Vasco.add(Lpais_vasco);
+		Laragon = new JLabel("");
+		Laragon.setIcon(new ImageIcon("Imagenes/aragon.png"));
+		Laragon.setBounds(0, 0, 674, 554);
+		Aragon.add(Laragon);
 		
-		Navarra = new JPanel();
-		Navarra.setLayout(null);
-		Navarra.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Navarra.setBounds(234, 0, 650, 500);
-		contentPane.add(Navarra);
-		Navarra.setVisible(false);
+		Asturias = new JPanel();
+		Asturias.setLayout(null);
+		Asturias.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Asturias.setBounds(95, 115, 674, 554);
+		contentPane.add(Asturias);
+		Asturias.setVisible(false);
 		
-		Npamplona = new JLabel("");
-		Npamplona.setBounds(275, 242, 50, 60);
-		Navarra.add(Npamplona);
+		Aoviedo = new JLabel("");
+		Aoviedo.setBounds(366, 233, 50, 60);
+		Asturias.add(Aoviedo);
 		
-		Lnavarra = new JLabel("");
-		Lnavarra.setIcon(new ImageIcon("Imagenes/navarre.png"));
-		Lnavarra.setBounds(0, 0, 650, 500);
-		Navarra.add(Lnavarra);
+		Lasturias = new JLabel("");
+		Lasturias.setIcon(new ImageIcon("Imagenes/asturies.png"));
+		Lasturias.setBounds(0, 0, 674, 554);
+		Asturias.add(Lasturias);
 		
-		Murcia = new JPanel();
-		Murcia.setLayout(null);
-		Murcia.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Murcia.setBounds(234, 0, 650, 500);
-		contentPane.add(Murcia);
-		Murcia.setVisible(false);
+		Baleares = new JPanel();
+		Baleares.setLayout(null);
+		Baleares.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Baleares.setBounds(95, 115, 674, 554);
+		contentPane.add(Baleares);
+		Baleares.setVisible(false);
 		
-		Mmurcia = new JLabel("");
-		Mmurcia.setBounds(288, 331, 50, 60);
-		Murcia.add(Mmurcia);
+		Bibiza = new JLabel("");
+		Bibiza.setBounds(31, 370, 50, 60);
+		Baleares.add(Bibiza);
 		
-		Lmurcia = new JLabel("");
-		Lmurcia.setIcon(new ImageIcon("Imagenes/murcie.png"));
-		Lmurcia.setBounds(0, 0, 650, 500);
-		Murcia.add(Lmurcia);
+		Bformentera = new JLabel("");
+		Bformentera.setBounds(31, 483, 50, 60);
+		Baleares.add(Bformentera);
 		
-		Madrid = new JPanel();
-		Madrid.setLayout(null);
-		Madrid.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Madrid.setBounds(234, 0, 650, 500);
-		contentPane.add(Madrid);
-		Madrid.setVisible(false);
+		Bcabrera = new JLabel("");
+		Bcabrera.setBounds(351, 330, 50, 60);
+		Baleares.add(Bcabrera);
 		
-		Mmadrid = new JLabel("");
-		Mmadrid.setBounds(319, 267, 50, 60);
-		Madrid.add(Mmadrid);
+		Bmallorca = new JLabel("");
+		Bmallorca.setBounds(368, 211, 50, 60);
+		Baleares.add(Bmallorca);
 		
-		Lmadrid = new JLabel("");
-		Lmadrid.setIcon(new ImageIcon("Imagenes/madrid.png"));
-		Lmadrid.setBounds(0, 0, 650, 500);
-		Madrid.add(Lmadrid);
+		Bmenorca = new JLabel("");
+		Bmenorca.setBounds(541, 23, 50, 60);
+		Baleares.add(Bmenorca);
 		
-		Galicia = new JPanel();
-		Galicia.setLayout(null);
-		Galicia.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Galicia.setBounds(234, 0, 650, 500);
-		contentPane.add(Galicia);
-		Galicia.setVisible(false);
+		Lbaleares = new JLabel("");
+		Lbaleares.setIcon(new ImageIcon("Imagenes/baleares.png"));
+		Lbaleares.setBounds(0, 0, 674, 554);
+		Baleares.add(Lbaleares);
 		
-		Glacoruña = new JLabel("");
-		Glacoruña.setBounds(251, 158, 50, 60);
-		Galicia.add(Glacoruña);
+		Canarias = new JPanel();
+		Canarias.setLayout(null);
+		Canarias.setBorder(new LineBorder(new Color(0, 0, 0)));
+		Canarias.setBounds(95, 115, 674, 554);
+		contentPane.add(Canarias);
+		Canarias.setVisible(false);
 		
-		Gpontebedra = new JLabel("");
-		Gpontebedra.setBounds(186, 315, 50, 60);
-		Galicia.add(Gpontebedra);
+		Cpalma = new JLabel("");
+		Cpalma.setBounds(26, 220, 50, 60);
+		Canarias.add(Cpalma);
 		
-		Glugo = new JLabel("");
-		Glugo.setBounds(352, 383, 50, 60);
-		Galicia.add(Glugo);
+		Chierro = new JLabel("");
+		Chierro.setBounds(10, 483, 50, 60);
+		Canarias.add(Chierro);
 		
-		Gorense = new JLabel("");
-		Gorense.setBounds(400, 202, 50, 60);
-		Galicia.add(Gorense);
+		Cgomera = new JLabel("");
+		Cgomera.setBounds(106, 363, 50, 60);
+		Canarias.add(Cgomera);
 		
-		Lgalicia = new JLabel("");
-		Lgalicia.setIcon(new ImageIcon("Imagenes/galice.png"));
-		Lgalicia.setBounds(0, 0, 650, 500);
-		Galicia.add(Lgalicia);
+		Ctenerife = new JLabel("");
+		Ctenerife.setBounds(196, 346, 50, 60);
+		Canarias.add(Ctenerife);
 		
-		Extremadura = new JPanel();
-		Extremadura.setLayout(null);
-		Extremadura.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Extremadura.setBounds(234, 0, 650, 500);
-		contentPane.add(Extremadura);
-		Extremadura.setVisible(false);
+		Ccanaria = new JLabel("");
+		Ccanaria.setBounds(339, 388, 50, 60);
+		Canarias.add(Ccanaria);
 		
-		Ecaceres = new JLabel("");
-		Ecaceres.setBounds(308, 185, 50, 60);
-		Extremadura.add(Ecaceres);
+		Cfuenteventura = new JLabel("");
+		Cfuenteventura.setBounds(557, 263, 50, 60);
+		Canarias.add(Cfuenteventura);
 		
-		Ebadajoz = new JLabel("");
-		Ebadajoz.setBounds(355, 335, 50, 60);
-		Extremadura.add(Ebadajoz);
+		Clanzarote = new JLabel("");
+		Clanzarote.setBounds(614, 100, 50, 60);
+		Canarias.add(Clanzarote);
 		
-		Lextremadura = new JLabel("");
-		Lextremadura.setIcon(new ImageIcon("Imagenes/estremadure.png"));
-		Lextremadura.setBounds(0, 0, 650, 500);
-		Extremadura.add(Lextremadura);
-		
-		Catalunia = new JPanel();
-		Catalunia.setLayout(null);
-		Catalunia.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Catalunia.setBounds(234, 0, 650, 500);
-		contentPane.add(Catalunia);
-		Catalunia.setVisible(false);
-		
-		Clerida = new JLabel("");
-		Clerida.setBounds(149, 191, 50, 60);
-		Catalunia.add(Clerida);
-		
-		Ctarragona = new JLabel("");
-		Ctarragona.setBounds(184, 316, 50, 60);
-		Catalunia.add(Ctarragona);
-		
-		Cbarcelona = new JLabel("");
-		Cbarcelona.setBounds(323, 270, 50, 60);
-		Catalunia.add(Cbarcelona);
-		
-		Cgerona = new JLabel("");
-		Cgerona.setBounds(510, 175, 50, 60);
-		Catalunia.add(Cgerona);
-		
-		LCatalunia = new JLabel("");
-		LCatalunia.setIcon(new ImageIcon("Imagenes/catalogne.png"));
-		LCatalunia.setBounds(0, 0, 650, 500);
-		Catalunia.add(LCatalunia);
-		
-		Valencia = new JPanel();
-		Valencia.setLayout(null);
-		Valencia.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Valencia.setBounds(234, 0, 650, 500);
-		contentPane.add(Valencia);
-		Valencia.setVisible(false);
-		
-		Valicante = new JLabel("");
-		Valicante.setBounds(162, 259, 50, 60);
-		Valencia.add(Valicante);
-		
-		Vvalencia = new JLabel("");
-		Vvalencia.setBounds(252, 226, 50, 60);
-		Valencia.add(Vvalencia);
-		
-		Vcastellon = new JLabel("");
-		Vcastellon.setBounds(453, 259, 50, 60);
-		Valencia.add(Vcastellon);
-		
-		Lvalencia = new JLabel("");
-		Lvalencia.setIcon(new ImageIcon("Imagenes/valence.png"));
-		Lvalencia.setBounds(0, 0, 650, 500);
-		Valencia.add(Lvalencia);
+		Lcanarias = new JLabel("");
+		Lcanarias.setIcon(new ImageIcon("Imagenes/canaries.png"));
+		Lcanarias.setBounds(0, 0, 674, 554);
+		Canarias.add(Lcanarias);
 		
 		CL = new JPanel();
 		CL.setLayout(null);
 		CL.setBorder(new LineBorder(new Color(0, 0, 0)));
-		CL.setBounds(234, 0, 650, 500);
+		CL.setBounds(95, 115, 674, 554);
 		contentPane.add(CL);
 		CL.setVisible(false);
 		
+		CLvalladolid = new JLabel("");
+		CLvalladolid.setBounds(247, 263, 50, 60);
+		CL.add(CLvalladolid);
+		
 		CLleon = new JLabel("");
-		CLleon.setBounds(199, 68, 50, 60);
+		CLleon.setBounds(88, 84, 50, 60);
 		CL.add(CLleon);
 		
 		CLpalencia = new JLabel("");
-		CLpalencia.setBounds(280, 84, 50, 60);
+		CLpalencia.setBounds(290, 104, 50, 60);
 		CL.add(CLpalencia);
 		
 		CLburgos = new JLabel("");
@@ -488,192 +501,242 @@ public class Vista extends JFrame{
 		CL.add(CLburgos);
 		
 		CLsoria = new JLabel("");
-		CLsoria.setBounds(463, 229, 50, 60);
+		CLsoria.setBounds(551, 230, 50, 60);
 		CL.add(CLsoria);
 		
 		CLsegovia = new JLabel("");
-		CLsegovia.setBounds(325, 321, 50, 60);
+		CLsegovia.setBounds(334, 359, 50, 60);
 		CL.add(CLsegovia);
 		
 		CLavila = new JLabel("");
-		CLavila.setBounds(247, 347, 50, 60);
+		CLavila.setBounds(262, 393, 50, 60);
 		CL.add(CLavila);
 		
 		CLsalamanca = new JLabel("");
-		CLsalamanca.setBounds(57, 374, 50, 60);
+		CLsalamanca.setBounds(135, 423, 50, 60);
 		CL.add(CLsalamanca);
 		
 		CLzamora = new JLabel("");
-		CLzamora.setBounds(135, 244, 50, 60);
+		CLzamora.setBounds(149, 274, 50, 60);
 		CL.add(CLzamora);
 		
 		Lcl = new JLabel("");
 		Lcl.setIcon(new ImageIcon("Imagenes/castilleleon.png"));
-		Lcl.setBounds(0, 0, 650, 500);
+		Lcl.setBounds(0, 0, 674, 554);
 		CL.add(Lcl);
+		//Aqui tenemos que hacer un refactor y poner la ruta relativa Alvaro porque no me salen las imagenes, el refactor es con control F le pones lo que quieres cambiar (la ruta de abajo hasta antes de Imagenes con la ruta relativa que sera .//src//Imagenes//nombre.png o sin el punto al principio, de todas maneras eso lo vemos luego np
+		Mapa = new JPanel();
 		
-		CM = new JPanel();
-		CM.setLayout(null);
-		CM.setBorder(new LineBorder(new Color(0, 0, 0)));
-		CM.setBounds(234, 0, 650, 500);
-		contentPane.add(CM);
+				Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
+				Mapa.setBounds(95, 115, 674, 554);
+				contentPane.add(Mapa);
+				Mapa.setLayout(null);
+				Mapa.setVisible(false);
+				
+				CAextremadura = new JLabel("");
+				CAextremadura.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAextremadura.setBounds(216, 232, 50, 60);
+				Mapa.add(CAextremadura);
+				
+				CAandalucia = new JLabel("");
+				CAandalucia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAandalucia.setBounds(232, 380, 50, 60);
+				Mapa.add(CAandalucia);
+				
+				CAcm = new JLabel("");
+				CAcm.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAcm.setBounds(304, 232, 50, 60);
+				Mapa.add(CAcm);
+				
+				CAmadrid = new JLabel("");
+				CAmadrid.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAmadrid.setBounds(304, 190, 50, 60);
+				Mapa.add(CAmadrid);
+				
+				CAvalencia = new JLabel("");
+				CAvalencia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAvalencia.setBounds(430, 264, 50, 60);
+				Mapa.add(CAvalencia);
+				
+				CAbarcelona = new JLabel("");
+				CAbarcelona.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAbarcelona.setBounds(546, 115, 50, 60);
+				Mapa.add(CAbarcelona);
+				
+				CAnavarra = new JLabel("");
+				CAnavarra.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAnavarra.setBounds(391, 47, 50, 60);
+				Mapa.add(CAnavarra);
+				
+				CApaisv = new JLabel("");
+				CApaisv.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CApaisv.setBounds(362, 22, 50, 60);
+				Mapa.add(CApaisv);
+				
+				CAasturias = new JLabel("");
+				CAasturias.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAasturias.setBounds(216, 0, 50, 60);
+				Mapa.add(CAasturias);
+				
+				CAgalicia = new JLabel("");
+				CAgalicia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAgalicia.setBounds(117, 22, 50, 60);
+				Mapa.add(CAgalicia);
+				
+				CAml = new JLabel("");
+				CAml.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAml.setBounds(259, 115, 50, 60);
+				Mapa.add(CAml);
+				
+				CAmurcia = new JLabel("");
+				CAmurcia.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAmurcia.setBounds(406, 350, 50, 60);
+				Mapa.add(CAmurcia);
+				
+				CAbaleares = new JLabel("");
+				CAbaleares.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAbaleares.setBounds(588, 251, 50, 60);
+				Mapa.add(CAbaleares);
+				
+				CAcanarias = new JLabel("");
+				CAcanarias.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAcanarias.setBounds(56, 483, 50, 60);
+				Mapa.add(CAcanarias);
+				
+				CAcantabria = new JLabel("");
+				CAcantabria.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAcantabria.setBounds(304, 11, 50, 60);
+				Mapa.add(CAcantabria);
+				
+				CAaragon = new JLabel("");
+				CAaragon.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAaragon.setBounds(411, 115, 50, 60);
+				Mapa.add(CAaragon);
+				
+				CAlarioja = new JLabel("");
+				CAlarioja.setIcon(new ImageIcon("Imagenes/Captura de pantalla 2023-11-16 095534.png"));
+				CAlarioja.setBounds(362, 82, 50, 60);
+				Mapa.add(CAlarioja);
+				
+				mapa = new JLabel("");
+				mapa.setBackground(new Color(255, 255, 255));
+				mapa.setIcon(new ImageIcon("Imagenes/espagne.png"));
+				mapa.setBounds(0, 0, 674, 554);
+				Mapa.add(mapa);
 		
-		CMguadalajara = new JLabel("");
-		CMguadalajara.setBounds(323, 97, 50, 60);
-		CM.add(CMguadalajara);
+		mando = new JPanel();
+		mando.setToolTipText("");
+		mando.setBorder(new LineBorder(new Color(0, 0, 0)));
+		mando.setBounds(1119, 0, 265, 769);
+		contentPane.add(mando);
+		mando.setLayout(null);
 		
-		CMcuenca = new JLabel("");
-		CMcuenca.setBounds(367, 217, 50, 60);
-		CM.add(CMcuenca);
+		Dia4 = new JButton("4");
+		Dia4.setFont(new Font("Segoe Script", Font.PLAIN, 17));
+		Dia4.setBounds(27, 228, 68, 39);
+		mando.add(Dia4);
 		
-		CMalbacete = new JLabel("");
-		CMalbacete.setBounds(415, 379, 50, 60);
-		CM.add(CMalbacete);
+		Dia3 = new JButton("3");
+		Dia3.setFont(new Font("Segoe Script", Font.PLAIN, 17));
+		Dia3.setBounds(27, 178, 68, 39);
+		mando.add(Dia3);
 		
-		CMciudadreal = new JLabel("");
-		CMciudadreal.setBounds(276, 336, 50, 60);
-		CM.add(CMciudadreal);
+		Dia2 = new JButton("2");
+		Dia2.setFont(new Font("Segoe Script", Font.PLAIN, 17));
+		Dia2.setBounds(27, 128, 68, 39);
+		mando.add(Dia2);
 		
-		CMtoledo = new JLabel("");
-		CMtoledo.setBounds(115, 200, 50, 60);
-		CM.add(CMtoledo);
+		Dia1 = new JButton("1");
+		Dia1.setFont(new Font("Segoe Script", Font.PLAIN, 17));
+		Dia1.setBounds(27, 81, 68, 39);
+		mando.add(Dia1);
 		
-		LCastillaM = new JLabel("");
-		LCastillaM.setIcon(new ImageIcon("Imagenes/castillemancha.png"));
-		LCastillaM.setBounds(0, 0, 650, 500);
-		CM.add(LCastillaM);
-		
-		Cantabria = new JPanel();
-		Cantabria.setLayout(null);
-		Cantabria.setBorder(new LineBorder(new Color(0, 0, 0)));
-		Cantabria.setBounds(234, 0, 650, 500);
-		contentPane.add(Cantabria);
-		Cantabria.setVisible(false);
-		
-		Ccantabria = new JLabel("");
-		Ccantabria.setBounds(287, 151, 50, 60);
-		Cantabria.add(Ccantabria);
-		
-		LCantabria = new JLabel("");
-		LCantabria.setIcon(new ImageIcon("Imagenes/cantabrie.png"));
-		LCantabria.setBounds(0, 0, 650, 500);
-		Cantabria.add(LCantabria);
-		
-		andalucia = new JPanel();
-		andalucia.setLayout(null);
-		andalucia.setBorder(new LineBorder(new Color(0, 0, 0)));
-		andalucia.setBounds(234, 0, 650, 500);
-		contentPane.add(andalucia);
-		andalucia.setVisible(false);
-		
-		Ahuelva = new JLabel("");
-		Ahuelva.setBounds(67, 139, 50, 60);
-		andalucia.add(Ahuelva);
-		
-		Asevilla = new JLabel("");
-		Asevilla.setBounds(159, 253, 50, 60);
-		andalucia.add(Asevilla);
-		
-		Acordoba = new JLabel("");
-		Acordoba.setBounds(299, 155, 50, 60);
-		andalucia.add(Acordoba);
-		
-		Ajaen = new JLabel("");
-		Ajaen.setBounds(387, 155, 50, 60);
-		andalucia.add(Ajaen);
-		
-		Agranada = new JLabel("");
-		Agranada.setBounds(482, 185, 50, 60);
-		andalucia.add(Agranada);
-		
-		Aalmeria = new JLabel("");
-		Aalmeria.setBounds(558, 200, 50, 60);
-		andalucia.add(Aalmeria);
-		
-		Amalaga = new JLabel("");
-		Amalaga.setBounds(265, 333, 50, 60);
-		andalucia.add(Amalaga);
-		
-		Acadiz = new JLabel("");
-		Acadiz.setBounds(177, 383, 50, 60);
-		andalucia.add(Acadiz);
-		
-		Landalucia = new JLabel("");
-		Landalucia.setIcon(new ImageIcon("Imagenes/andalousie.jpg"));
-		Landalucia.setBounds(0, 0, 650, 500);
-		andalucia.add(Landalucia);
-		
-		panel_1 = new JPanel();
-		panel_1.setToolTipText("");
-		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_1.setBounds(0, 500, 884, 261);
-		contentPane.add(panel_1);
-		panel_1.setLayout(null);
-		
-		DatoTemMax = new JLabel("");
-		DatoTemMax.setBackground(new Color(243, 182, 90));
-		DatoTemMax.setForeground(new Color(0, 0, 0));
-		DatoTemMax.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		DatoTemMax.setBounds(308, 61, 162, 39);
-		panel_1.add(DatoTemMax);
+		Encender = new JButton("");
+		Encender.setIcon(new ImageIcon("Imagenes/boton.png"));
+		Encender.setBounds(35, 11, 50, 50);
+		mando.add(Encender);
 		
 		comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUNIA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA"}));
-		comboBox.setBounds(10, 61, 188, 39);
-		panel_1.add(comboBox);
+		comboBox.setBounds(10, 602, 188, 39);
+		mando.add(comboBox);
 		
 		comboBox_1 = new JComboBox();
 		comboBox_1.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA"}));
-		comboBox_1.setBounds(10, 111, 188, 39);
-		panel_1.add(comboBox_1);
+		comboBox_1.setBounds(10, 652, 188, 39);
+		mando.add(comboBox_1);
 		
 		BuscarPro = new JButton("");
 		BuscarPro.setIcon(new ImageIcon("Imagenes/TIK.png"));
-		BuscarPro.setBounds(208, 111, 40, 40);
-		panel_1.add(BuscarPro);
+		BuscarPro.setBounds(208, 652, 40, 40);
+		mando.add(BuscarPro);
 		
 		BuscarCM = new JButton("");
+		BuscarCM.setBackground(new Color(255, 255, 255));
 		BuscarCM.setIcon(new ImageIcon("Imagenes/TIK.png"));
-		BuscarCM.setBounds(208, 60, 40, 40);
-		panel_1.add(BuscarCM);
+		BuscarCM.setBounds(208, 602, 40, 40);
+		mando.add(BuscarCM);
 		
-		Lespaña = new JLabel("ESPAÑA\r\n");
-		Lespaña.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		Lespaña.setBounds(10, 11, 188, 39);
-		panel_1.add(Lespaña);
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("Imagenes/mando.png"));
+		lblNewLabel.setBounds(0, 0, 265, 769);
+		mando.add(lblNewLabel);
 		
-		Ltmax = new JLabel("TEM.MAXIMA");
-		Ltmax.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		Ltmax.setBounds(308, 11, 188, 39);
-		panel_1.add(Ltmax);
+		Tele = new JLabel("");
+		Tele.setIcon(new ImageIcon("Imagenes/television.png"));
+		Tele.setBounds(0, 0, 1120, 769);
+		contentPane.add(Tele);
 		
-		Ltmin = new JLabel("TEM.MINIMA");
-		Ltmin.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		Ltmin.setBounds(550, 11, 188, 39);
-		panel_1.add(Ltmin);
+		panel = new JPanel();
+		panel.setBounds(1383, 0, 151, 769);
+		contentPane.add(panel);
+		panel.setLayout(null);
 		
-		DatoTemMin = new JLabel("");
-		DatoTemMin.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		DatoTemMin.setBounds(550, 61, 162, 39);
-		panel_1.add(DatoTemMin);
+		Fecha = new JLabel("");
+		Fecha.setFont(new Font("Segoe Script", Font.PLAIN, 18));
+		Fecha.setBounds(10, 666, 131, 50);
+		panel.add(Fecha);
 		
-		//PRUEBA HUMILDE DEL METODO DE OBTENER PRONOSTICO EN LA INTERFAS CON ESTE TEXTAREA
-		textAreaPrueba = new JTextArea();
-		textAreaPrueba.setBounds(318, 111, 349, 106);
-		panel_1.add(textAreaPrueba);
+		lblNewLabel_5_1 = new JLabel("Fecha");
+		lblNewLabel_5_1.setFont(new Font("Segoe Script", Font.PLAIN, 18));
+		lblNewLabel_5_1.setBounds(42, 604, 109, 79);
+		panel.add(lblNewLabel_5_1);
 		
-		panel_2 = new JPanel();
-		panel_2.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_2.setBounds(0, 250, 236, 250);
-		contentPane.add(panel_2);
-		panel_2.setLayout(null);
+		TemMax = new JLabel("");
+		TemMax.setFont(new Font("Segoe Script", Font.PLAIN, 55));
+		TemMax.setBounds(20, 319, 115, 69);
+		panel.add(TemMax);
 		
-		panel_3 = new JPanel();
-		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_3.setBounds(0, 0, 236, 250);
-		contentPane.add(panel_3);
-		panel_3.setLayout(null);
+		TemMin = new JLabel("");
+		TemMin.setFont(new Font("Segoe Script", Font.PLAIN, 55));
+		TemMin.setBounds(20, 524, 115, 69);
+		panel.add(TemMin);
+		
+		lblNewLabel_5 = new JLabel("TemperaturaMin");
+		lblNewLabel_5.setFont(new Font("Segoe Script", Font.PLAIN, 14));
+		lblNewLabel_5.setBounds(10, 455, 141, 79);
+		panel.add(lblNewLabel_5);
+		
+		lblNewLabel_4 = new JLabel("TemperaturaMax");
+		lblNewLabel_4.setFont(new Font("Segoe Script", Font.PLAIN, 14));
+		lblNewLabel_4.setBounds(10, 255, 141, 79);
+		panel.add(lblNewLabel_4);
+		
+		Tiempecito = new JLabel("");
+		Tiempecito.setBounds(42, 115, 50, 60);
+		panel.add(Tiempecito);
+		
+		lblNewLabel_3 = new JLabel("Tiempo");
+		lblNewLabel_3.setFont(new Font("Segoe Script", Font.PLAIN, 18));
+		lblNewLabel_3.setBounds(32, 70, 91, 50);
+		panel.add(lblNewLabel_3);
+		
+		lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblNewLabel_2.setIcon(new ImageIcon("Imagenes/fondo.png"));
+		lblNewLabel_2.setBounds(0, 0, 151, 769);
+		panel.add(lblNewLabel_2);
 	}
 }
