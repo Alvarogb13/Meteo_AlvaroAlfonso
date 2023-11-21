@@ -640,22 +640,22 @@ public class Vista extends JFrame {
 		contentPane.add(mando);
 		mando.setLayout(null);
 
-		Dia4 = new JButton("Dia4");
+		Dia4 = new JButton("D4");
 		Dia4.setFont(new Font("Segoe Script", Font.PLAIN, 12));
 		Dia4.setBounds(27, 228, 68, 39);
 		mando.add(Dia4);
 
-		Dia3 = new JButton("Dia3");
+		Dia3 = new JButton("D3");
 		Dia3.setFont(new Font("Segoe Script", Font.PLAIN, 12));
 		Dia3.setBounds(27, 178, 68, 39);
 		mando.add(Dia3);
 
-		Dia2 = new JButton("Dia2");
+		Dia2 = new JButton("D2");
 		Dia2.setFont(new Font("Segoe Script", Font.PLAIN, 12));
 		Dia2.setBounds(27, 128, 68, 39);
 		mando.add(Dia2);
 
-		Dia1 = new JButton("Dia1");
+		Dia1 = new JButton("D1");
 		Dia1.setFont(new Font("Segoe Script", Font.PLAIN, 12));
 		Dia1.setBounds(27, 81, 68, 39);
 		mando.add(Dia1);

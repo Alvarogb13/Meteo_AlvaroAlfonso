@@ -117,7 +117,7 @@ public class Controlador implements ActionListener {
 			if (e.getSource() == this.vista.BuscarCM) {
 				numero = vista.comboBox.getSelectedIndex();
 				if (numero > 0) { // Si numero es mayor que 0 (siempre que entremos en un if va a ser mayor que 0
-					makeSound("src/sounds/seleccionProvincia.wav");
+					makeSound("src/sounds/boton.wav");
 					if (numero == 1) {
 						vista.andalucia.setVisible(true);
 						vista.Mapa.setVisible(false);
@@ -526,6 +526,8 @@ public class Controlador implements ActionListener {
 						vista.Asturias.setVisible(false);
 						vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] { "PROVINCIA" }));
+					} else {
+						makeSound("src/sounds/error.wav");
 					}
 				} else {
 					makeSound("src/sounds/error.wav");
@@ -542,7 +544,7 @@ public class Controlador implements ActionListener {
 				vista.TemMax.setText(max(prueba(nombreCiudad), nombreCiudad, 0) + "º");
 				vista.TemMin.setText(min(prueba(nombreCiudad), nombreCiudad, 0) + "º");
 				vista.Fecha.setText(String.valueOf(fecha));
-				makeSound("src/sounds/seleccionProvincia.wav");
+				makeSound("src/sounds/boton.wav");
 			} catch (InterruptedException e1) {
 				System.err.println("Selecciona una provincia valida porfavore");
 			}
@@ -626,7 +628,7 @@ public class Controlador implements ActionListener {
 			Set<String> nombresCiudades = configuracion.stringPropertyNames();
 			String url = configuracion.getProperty(ciudad);
 			String json = fetchDataFromURL(url);
-			tiempo = tirmpo(json, ciudad);
+			tiempo = tiempo(json, ciudad);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -643,7 +645,7 @@ public class Controlador implements ActionListener {
 			Set<String> nombresCiudades = configuracion.stringPropertyNames();
 			String url = configuracion.getProperty(ciudad);
 			String json = fetchDataFromURL(url);
-			tiempo = tirmpo1(json, ciudad, numero);
+			tiempo = tiempo1(json, ciudad, numero);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -651,7 +653,7 @@ public class Controlador implements ActionListener {
 		return tiempo;
 	}
 
-	public static String tirmpo(String info, String nombre) {
+	public static String tiempo(String info, String nombre) {
 
 		Gson ciudad = new Gson();
 		JsonObject jsonO = ciudad.fromJson(info, JsonObject.class);
@@ -660,7 +662,7 @@ public class Controlador implements ActionListener {
 		return tiempo;
 	}
 
-	public static String tirmpo1(String info, String nombre, int numero) {
+	public static String tiempo1(String info, String nombre, int numero) {
 
 		Gson ciudad = new Gson();
 		JsonObject jsonO = ciudad.fromJson(info, JsonObject.class);
@@ -782,7 +784,7 @@ public class Controlador implements ActionListener {
 		return imagen;
 	}
 
-	// Método para reproducir sonido (lo mismo que proporcionaste anteriormente)
+	// Método para reproducir sonido
 	public void makeSound(String ruta) throws InterruptedException {
 		try {
 			AudioInputStream audio = AudioSystem.getAudioInputStream(new File(ruta).getAbsoluteFile());
