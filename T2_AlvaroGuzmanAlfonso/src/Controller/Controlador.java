@@ -46,7 +46,6 @@ public class Controlador implements ActionListener {
 
 	private List<Ciudad> ciudades;
 	Vista vista = new Vista();
-
 	int encender = 0;
 
 	public Controlador(Vista frame) throws InterruptedException {
@@ -79,6 +78,7 @@ public class Controlador implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		//con estas condiciones encendemos la tele o la apagamos y seleccionamos una de las comunidades y su provincia
 		int numero;
 		try {
 			if (e.getSource() == this.vista.Encender) {
