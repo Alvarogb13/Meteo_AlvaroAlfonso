@@ -749,8 +749,8 @@ public class Controlador implements ActionListener {
 			imagen = "Imagenes/Intervalos de sol.png";
 		} else if (timepo.equalsIgnoreCase("Lluvia")) {
 			imagen = "Imagenes/Lluvia.png";
-		} else if (timepo.equalsIgnoreCase("Nevada dévil")) {
-			imagen = "Imagenes/Nevada dévil.png";
+		} else if (timepo.equalsIgnoreCase("Nevada débil")) {
+			imagen = "Imagenes/Nevada debil.png";
 		} else if (timepo.equalsIgnoreCase("Niebla")) {
 			imagen = "Imagenes/Niebla.png";
 		} else if (timepo.equalsIgnoreCase("Nieve")) {
@@ -779,8 +779,17 @@ public class Controlador implements ActionListener {
 			imagen = "Imagenes/Ventisca alta.png";
 		} else if(timepo.equalsIgnoreCase("Lluvia engelante")) {
 			imagen = "Imagenes/Lluvia engelante.png";
-		} 
-		
+		} else if(timepo.equalsIgnoreCase("Chubascos ocasionales")) {
+			imagen = "Imagenes/Chubascos ocasionales.png";
+		} else if(timepo.equalsIgnoreCase("Templado")) {
+			imagen = "Imagenes/Templado.png";
+		} else if(timepo.equalsIgnoreCase("Despejado")) {
+			imagen = "Imagenes/Despejado.png";
+		} else if(timepo.equalsIgnoreCase("Ceniza volcánica")) {
+			imagen = "Imagenes/Ceniza volcanica.png";
+		} else if(timepo.equalsIgnoreCase("Escarcha")) {
+			imagen = "Imagenes/Escarcha.png";
+		}
 		return imagen;
 	}
 
