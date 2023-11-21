@@ -80,6 +80,7 @@ public class Controlador implements ActionListener {
 			try {
 			if (e.getSource()  ==  this.vista.Encender) {
 				if (encender  ==  0) {
+					makeSound();
 					vista.Mapa.setVisible(true);
 					encender = 1;
 				} else if (encender  ==  1){
@@ -470,19 +471,15 @@ public class Controlador implements ActionListener {
 		 }
 		
 			//metodo para reproducir sonido
-			public void playSound(String soundName){
-			   try 
-			   {
-			    AudioInputStream audioInputStream  =  AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
-			    Clip clip  =  AudioSystem.getClip();
-			    clip.open(audioInputStream);
-			    clip.start();
-			   }
-			   catch(Exception ex)
-			   {
-			     System.out.println("Error al reproducir el sonido.");
-			     ex.printStackTrace( );
-			   }
-			 } 
+			 public void makeSound(){
+				    File sonidete = new File("sounds/apagarTele.aiff");
+				    try{
+				        Clip clip = AudioSystem.getClip();
+				        clip.open(AudioSystem.getAudioInputStream(sonidete));
+				        clip.start();
+				    } catch (Exception e){
+				        e.printStackTrace();
+				    }
+				}
 	
 }
