@@ -116,6 +116,7 @@ public class Controlador implements ActionListener {
 			if (e.getSource() == this.vista.BuscarCM) {
 				numero = vista.comboBox.getSelectedIndex();
 				if (numero > 0) { // Si numero es mayor que 0 (siempre que entremos en un if va a ser mayor que 0
+					makeSound("src/sounds/seleccionProvincia.wav");
 					if (numero == 1) {
 						vista.andalucia.setVisible(true);
 						vista.Mapa.setVisible(false);
@@ -526,7 +527,8 @@ public class Controlador implements ActionListener {
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] { "PROVINCIA" }));
 					}
 				} else {
-					System.out.println("Error al seleccionar comunidad autonoma");
+					makeSound("src/sounds/error.wav");
+					System.out.println("Por favor seleccione una comunidad autonoma existente");
 				}
 			}
 		} catch (InterruptedException e1) {
@@ -539,59 +541,60 @@ public class Controlador implements ActionListener {
 				vista.TemMax.setText(max(prueba(nombreCiudad), nombreCiudad, 0) + "º");
 				vista.TemMin.setText(min(prueba(nombreCiudad), nombreCiudad, 0) + "º");
 				vista.Fecha.setText(String.valueOf(fecha));
+				makeSound("src/sounds/seleccionProvincia.wav");
 			} catch (InterruptedException e1) {
-				e1.printStackTrace();
+				System.err.println("Selecciona una provincia valida porfavore");
 			}
 		}
 		//Vista de los diferentes dias que queremoh ver
 		if (e.getSource() == this.vista.Dia1) {
-			int Dia = 0;
+			int dia = 0;
 			try {
 				makeSound("src/sounds/boton.wav");
 			} catch (InterruptedException e1) {
 				System.out.println("Error al reproducir el sonidete");
 			}
 			LocalDate fecha = LocalDate.now();
-			dias(Dia, fecha);
+			dias(dia, fecha);
 		}
 		if (e.getSource() == this.vista.Dia2) {
-			int Dia = 1;
+			int dia = 1;
 			try {
 				makeSound("src/sounds/boton.wav");
 			} catch (InterruptedException e1) {
 				System.out.println("Error al reproducir el sonidete");
 			}
 			LocalDate fecha = LocalDate.now().plusDays(1);
-			dias(Dia, fecha);
+			dias(dia, fecha);
 		}
 		if (e.getSource() == this.vista.Dia3) {
-			int Dia = 2;
+			int dia = 2;
 			try {
 				makeSound("src/sounds/boton.wav");
 			} catch (InterruptedException e1) {
 				System.out.println("Error al reproducir el sonidete");
 			}
 			LocalDate fecha = LocalDate.now().plusDays(2);
-			dias(Dia, fecha);
+			dias(dia, fecha);
 		}
 		if (e.getSource() == this.vista.Dia4) {
-			int Dia = 3;
+			int dia = 3;
 			try {
 				makeSound("src/sounds/boton.wav");
 			} catch (InterruptedException e1) {
 				System.out.println("Error al reproducir el sonidete");
 			}
 			LocalDate fecha = LocalDate.now().plusDays(3);
-			dias(Dia, fecha);
+			dias(dia, fecha);
 		}
 	}
 
-	public void dias(int Dia, LocalDate fecha) {
+	public void dias(int dia, LocalDate fecha) {
 		String nombreCiudad = vista.comboBox_1.getSelectedItem().toString();
 		try {
-			vista.Tiempecito.setIcon(new ImageIcon(fotitos(prueba3(nombreCiudad, Dia))));
-			vista.TemMax.setText(max(prueba(nombreCiudad), nombreCiudad, Dia) + "º");
-			vista.TemMin.setText(min(prueba(nombreCiudad), nombreCiudad, Dia) + "º");
+			vista.Tiempecito.setIcon(new ImageIcon(fotitos(prueba3(nombreCiudad, dia))));
+			vista.TemMax.setText(max(prueba(nombreCiudad), nombreCiudad, dia) + "º");
+			vista.TemMin.setText(min(prueba(nombreCiudad), nombreCiudad, dia) + "º");
 			vista.Fecha.setText(String.valueOf(fecha));
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();

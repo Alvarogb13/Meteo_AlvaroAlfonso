@@ -533,11 +533,7 @@ public class Vista extends JFrame {
 		Lcl.setIcon(new ImageIcon("Imagenes/castilleleon.png"));
 		Lcl.setBounds(0, 0, 674, 554);
 		CL.add(Lcl);
-		// Aqui tenemos que hacer un refactor y poner la ruta relativa Alvaro porque no
-		// me salen las imagenes, el refactor es con control F le pones lo que quieres
-		// cambiar (la ruta de abajo hasta antes de Imagenes con la ruta relativa que
-		// sera Imagenes//nombre.png o sin el punto al principio, de todas
-		// maneras eso lo vemos luego np
+		// Aqui tenemos que hacer un refactor y poner la ruta relativa 
 		Mapa = new JPanel();
 
 		Mapa.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -671,9 +667,7 @@ public class Vista extends JFrame {
 
 		comboBox = new JComboBox();
 		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 24));
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUNIA",
-				"EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES",
-				"CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA" }));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "COMUNIDAD", "ANDALUCIA", "VALENCIA", "CATALUNIA", "EXTREMADURA", "GALICIA", "MADRID", "MURCIA", "NAVARRA", "PAIS VASCO", "LARIOJA", "ARAGON", "BALEARES", "CANARIAS", "CASTILLAL", "CASTILLAM", "CANTABRIA", "ASTURIAS", "MAPA" }));
 		comboBox.setBounds(10, 602, 188, 39);
 		mando.add(comboBox);
 
