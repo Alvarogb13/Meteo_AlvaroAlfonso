@@ -1,6 +1,7 @@
 package View;
 import java.awt.EventQueue;
 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -13,6 +14,10 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
 import java.awt.Font;
 import java.awt.Window;
 
@@ -20,6 +25,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.awt.event.ActionEvent;
 
 public class Vista extends JFrame{
@@ -740,4 +746,6 @@ public class Vista extends JFrame{
 		lblNewLabel_2.setBounds(0, 0, 151, 769);
 		panel.add(lblNewLabel_2);
 	}
+	
+   
 }

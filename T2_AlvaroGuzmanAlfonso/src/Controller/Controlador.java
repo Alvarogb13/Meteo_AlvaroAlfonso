@@ -8,6 +8,7 @@ import java.util.Iterator;
 
 import View.Vista;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,6 +23,10 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 
@@ -37,11 +42,11 @@ public class Controlador implements ActionListener {
 	
 	
 		private List<Ciudad> ciudades;
-		Vista vista = new Vista();
-		int encender = 0;
+		Vista vista  =  new Vista();
+		int encender  =  0;
 		
 		public Controlador(Vista frame) throws InterruptedException {
-			vista = frame;
+			vista  =  frame;
 			this.vista.BuscarCM.addActionListener(this);
 			this.vista.BuscarPro.addActionListener(this);
 			this.vista.Encender.addActionListener(this);
@@ -73,11 +78,11 @@ public class Controlador implements ActionListener {
 			int numero;
 		
 			try {
-			if (e.getSource() == this.vista.Encender) {
-				if (encender == 0) {
+			if (e.getSource()  ==  this.vista.Encender) {
+				if (encender  ==  0) {
 					vista.Mapa.setVisible(true);
-					encender=1;
-				} else if (encender == 1){
+					encender = 1;
+				} else if (encender  ==  1){
 					vista.andalucia.setVisible(false);
 					vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 					vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
@@ -86,14 +91,14 @@ public class Controlador implements ActionListener {
 					vista.TemMax.setText("");
 					vista.TemMin.setText("");
 					vista.Fecha.setText("");
-					encender=0;
+					encender = 0;
 				}
 			}
-			if (e.getSource() == this.vista.BuscarCM) {
-				numero=vista.comboBox.getSelectedIndex();
+			if (e.getSource()  ==  this.vista.BuscarCM) {
+				numero = vista.comboBox.getSelectedIndex();
 				//Aqui en estos if he pensado en que si ves posible hacer un método y trabajar con el this, yo lo veo viable nao? para no tener tanta linea de codigo, de todas maneras la optimizacion la dejamos para cuando la app sea funcional si quieres, si lo ves easy de hacer guay sino np bru
 				if (numero > 0) { //Si numero es mayor que 0 (siempre que entremos en un if va a ser mayor que 0 así que entra siempre jejejeje)
-					if (numero == 1) {
+					if (numero  ==  1) {
 						vista.andalucia.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
@@ -107,7 +112,7 @@ public class Controlador implements ActionListener {
 						vista.Ajaen.setIcon(new ImageIcon(fotitos(prueba2("Jaen"))));	
 						vista.Agranada.setIcon(new ImageIcon(fotitos(prueba2("Granada"))));
 						vista.Aalmeria.setIcon(new ImageIcon(fotitos(prueba2("Almeria"))));
-					} else if (numero == 2) {
+					} else if (numero  ==  2) {
 						vista.Valencia.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
@@ -116,7 +121,7 @@ public class Controlador implements ActionListener {
 						vista.Vvalencia.setIcon(new ImageIcon(fotitos(prueba2("Valencia"))));
 						vista.Vcastellon.setIcon(new ImageIcon(fotitos(prueba2("Castellon"))));
 						vista.Valicante.setIcon(new ImageIcon(fotitos(prueba2("Alicante"))));
-					} else if (numero == 3) {
+					} else if (numero  ==  3) {
 						vista.Catalunia.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
@@ -126,7 +131,7 @@ public class Controlador implements ActionListener {
 						vista.Cgerona.setIcon(new ImageIcon(fotitos(prueba2("Girona"))));
 						vista.Ctarragona.setIcon(new ImageIcon(fotitos(prueba2("Tarragona"))));
 						vista.Clerida.setIcon(new ImageIcon(fotitos(prueba2("Lerida"))));
-					} else if (numero == 4) {
+					} else if (numero  ==  4) {
 						vista.Extremadura.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.CL.setVisible(false);
@@ -134,7 +139,7 @@ public class Controlador implements ActionListener {
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Caceres", "Badajoz"}));
 						vista.Ebadajoz.setIcon(new ImageIcon(fotitos(prueba2("Caceres"))));
 						vista.Ecaceres.setIcon(new ImageIcon(fotitos(prueba2("Badajoz"))));
-					} else if (numero == 5) {
+					} else if (numero  ==  5) {
 						vista.Galicia.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
@@ -144,28 +149,28 @@ public class Controlador implements ActionListener {
 						vista.Gorense.setIcon(new ImageIcon(fotitos(prueba2("Ourense"))));
 						vista.Glugo.setIcon(new ImageIcon(fotitos(prueba2("Lugo"))));
 						vista.Gpontebedra.setIcon(new ImageIcon(fotitos(prueba2("Pontevedra"))));
-					} else if (numero == 6) {
+					} else if (numero  ==  6) {
 						vista.Madrid.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Madrid"}));
 						vista.Mmadrid.setIcon(new ImageIcon(fotitos(prueba2("Madrid"))));
-					} else if (numero == 7) {
+					} else if (numero  ==  7) {
 						vista.Murcia.setVisible(true);
 						vista.Mapa.setVisible(false);vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Murcia"}));
 						vista.Mmurcia.setIcon(new ImageIcon(fotitos(prueba2("Murcia"))));
-					} else if (numero == 8) {
+					} else if (numero  ==  8) {
 						vista.Navarra.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Pamplona"}));
 						vista.Npamplona.setIcon(new ImageIcon(fotitos(prueba2("Pamplona"))));
-					} else if (numero == 9) {
+					} else if (numero  ==  9) {
 						vista.Pais_Vasco.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);vista.CL.setVisible(false);
@@ -174,14 +179,14 @@ public class Controlador implements ActionListener {
 						vista.PVvizcaya.setIcon(new ImageIcon(fotitos(prueba2("Vizcaya"))));
 						vista.PVguipuzcua.setIcon(new ImageIcon(fotitos(prueba2("Guipuzcoa"))));
 						vista.PValava.setIcon(new ImageIcon(fotitos(prueba2("Alava"))));
-					} else if (numero == 10) {
+					} else if (numero  ==  10) {
 						vista.LaRioja.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.CL.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Logronio"}));
 						vista.LRlogroño.setIcon(new ImageIcon(fotitos(prueba2("Logronio"))));
-					} else if (numero == 11) {
+					} else if (numero  ==  11) {
 						vista.Aragon.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
@@ -190,21 +195,21 @@ public class Controlador implements ActionListener {
 						vista.Ahuesca.setIcon(new ImageIcon(fotitos(prueba2("Huesca"))));
 						vista.Azaragoza.setIcon(new ImageIcon(fotitos(prueba2("Zaragoza"))));
 						vista.Atreruel.setIcon(new ImageIcon(fotitos(prueba2("Teruel"))));
-					} else if (numero == 12) {
+					} else if (numero  ==  12) {
 						vista.Baleares.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Mallorca"}));
 						vista.Bmallorca.setIcon(new ImageIcon(fotitos(prueba2("Mallorca"))));
-					} else if (numero == 13) {
+					} else if (numero  ==  13) {
 						vista.Canarias.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Tenerife"}));
 						vista.Ctenerife.setIcon(new ImageIcon(fotitos(prueba2("Tenerife"))));
-					} else if (numero == 14) {
+					} else if (numero  ==  14) {
 						vista.CL.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
@@ -219,7 +224,7 @@ public class Controlador implements ActionListener {
 						vista.CLvalladolid.setIcon(new ImageIcon(fotitos(prueba2("Valladolid"))));
 						vista.CLsoria.setIcon(new ImageIcon(fotitos(prueba2("Soria"))));
 						vista.CLsegovia.setIcon(new ImageIcon(fotitos(prueba2("Segovia"))));
-					} else if (numero == 15) {
+					} else if (numero  ==  15) {
 						vista.CM.setVisible(true);
 						vista.Mapa.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
@@ -230,34 +235,36 @@ public class Controlador implements ActionListener {
 						vista.CMguadalajara.setIcon(new ImageIcon(fotitos(prueba2("Guadalajara"))));
 						vista.CMcuenca.setIcon(new ImageIcon(fotitos(prueba2("Cuenca"))));
 						vista.CMtoledo.setIcon(new ImageIcon(fotitos(prueba2("Toledo"))));
-					} else if (numero == 16) {
+					} else if (numero  ==  16) {
 						vista.Cantabria.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.CL.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Santander"}));
 						vista.Ccantabria.setIcon(new ImageIcon(fotitos(prueba2("Santander"))));
-					} else if (numero == 17) {
+					} else if (numero  ==  17) {
 						vista.Asturias.setVisible(true);
 						vista.Mapa.setVisible(false); vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false);vista.Cantabria.setVisible(false);vista.CL.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA", "Oviedo"}));
 						vista.Aoviedo.setIcon(new ImageIcon(fotitos(prueba2("Oviedo"))));
-					} else if (numero == 18) {
+					} else if (numero  ==  18) {
 						vista.Mapa.setVisible(true);
 						vista.CM.setVisible(false); vista.Canarias.setVisible(false);vista.Baleares.setVisible(false);vista.Aragon.setVisible(false);vista.LaRioja.setVisible(false);vista.CL.setVisible(false);
 						vista.Pais_Vasco.setVisible(false);vista.Navarra.setVisible(false);vista.Murcia.setVisible(false);vista.Madrid.setVisible(false);vista.Galicia.setVisible(false);vista.Extremadura.setVisible(false);
 						vista.Catalunia.setVisible(false);vista.Valencia.setVisible(false);vista.andalucia.setVisible(false); vista.Asturias.setVisible(false);vista.Cantabria.setVisible(false);
 						vista.comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"PROVINCIA"}));
 					}
+				}else {
+					System.out.println("Error al seleccionar comunidad autonoma");
 				}
 			}
 			}catch (InterruptedException e1) {
 			}
-			if (e.getSource() == this.vista.BuscarPro) {
-				LocalDate fecha = LocalDate.now();
-				String nombreCiudad = vista.comboBox_1.getSelectedItem().toString();
+			if (e.getSource()  ==  this.vista.BuscarPro) {
+				LocalDate fecha  =  LocalDate.now();
+				String nombreCiudad  =  vista.comboBox_1.getSelectedItem().toString();
 				try {
 					vista.Tiempecito.setIcon(new ImageIcon(fotitos(prueba2(nombreCiudad))));
 					vista.TemMax.setText(max(prueba(nombreCiudad), nombreCiudad, 0) + "º");
@@ -267,31 +274,31 @@ public class Controlador implements ActionListener {
 					e1.printStackTrace();
 				}
 			}
-			if (e.getSource() == this.vista.Dia1) {
-				int Dia = 0;
-				LocalDate fecha = LocalDate.now();
+			if (e.getSource()  ==  this.vista.Dia1) {
+				int Dia  =  0;
+				LocalDate fecha  =  LocalDate.now();
 				dias(Dia, fecha);
 			}
-			if (e.getSource() == this.vista.Dia2) {
-				int Dia = 1;
-				LocalDate fecha = LocalDate.now().plusDays(1);
+			if (e.getSource()  ==  this.vista.Dia2) {
+				int Dia  =  1;
+				LocalDate fecha  =  LocalDate.now().plusDays(1);
 				dias(Dia, fecha);
 			}
-			if (e.getSource() == this.vista.Dia3) {
-				int Dia = 2;
-				LocalDate fecha = LocalDate.now().plusDays(2);
+			if (e.getSource()  ==  this.vista.Dia3) {
+				int Dia  =  2;
+				LocalDate fecha  =  LocalDate.now().plusDays(2);
 				dias(Dia, fecha);
 			}
-			if (e.getSource() == this.vista.Dia4) {
-				int Dia = 3;
-				LocalDate fecha = LocalDate.now().plusDays(3);
+			if (e.getSource()  ==  this.vista.Dia4) {
+				int Dia  =  3;
+				LocalDate fecha  =  LocalDate.now().plusDays(3);
 				dias(Dia, fecha);
 			}
 			
 		}
 
 		public void dias(int Dia, LocalDate fecha) {
-			String nombreCiudad = vista.comboBox_1.getSelectedItem().toString();
+			String nombreCiudad  =  vista.comboBox_1.getSelectedItem().toString();
 			try {
 				vista.Tiempecito.setIcon(new ImageIcon(fotitos(prueba3(nombreCiudad, Dia))));
 				vista.TemMax.setText(max(prueba(nombreCiudad), nombreCiudad, Dia) + "º");
@@ -302,14 +309,14 @@ public class Controlador implements ActionListener {
 			}
 		}
 		public static String prueba(String ciudad) throws InterruptedException {
-			 Properties configuracion = new Properties();
-			 ArrayList<String> ciudades = new ArrayList<>();
-			 String json = null;
+			 Properties configuracion  =  new Properties();
+			 ArrayList<String> ciudades  =  new ArrayList<>();
+			 String json  =  null;
 		        try {
 		            configuracion.load(new FileReader("src/resources/config.properties"));
-		            Set<String> nombresCiudades = configuracion.stringPropertyNames();
-		            String url = configuracion.getProperty(ciudad);
-		            json = fetchDataFromURL(url);
+		            Set<String> nombresCiudades  =  configuracion.stringPropertyNames();
+		            String url  =  configuracion.getProperty(ciudad);
+		            json  =  fetchDataFromURL(url);
 	            
 		        } catch (IOException e) {
 		            e.printStackTrace();
@@ -318,15 +325,15 @@ public class Controlador implements ActionListener {
 		 }
 		 
 		 public static String prueba2(String ciudad) throws InterruptedException {
-			 Properties configuracion = new Properties();
-			 ArrayList<String> ciudades = new ArrayList<>();
-			 String tiempo = null;
+			 Properties configuracion  =  new Properties();
+			 ArrayList<String> ciudades  =  new ArrayList<>();
+			 String tiempo  =  null;
 		        try {
 		            configuracion.load(new FileReader("src/resources/config.properties"));
-		            Set<String> nombresCiudades = configuracion.stringPropertyNames();
-		            String url = configuracion.getProperty(ciudad);
-		            String json = fetchDataFromURL(url);
-		            tiempo = tirmpo(json, ciudad);
+		            Set<String> nombresCiudades  =  configuracion.stringPropertyNames();
+		            String url  =  configuracion.getProperty(ciudad);
+		            String json  =  fetchDataFromURL(url);
+		            tiempo  =  tirmpo(json, ciudad);
 	            
 		        } catch (IOException e) {
 		            e.printStackTrace();
@@ -334,15 +341,15 @@ public class Controlador implements ActionListener {
 			return tiempo;
 		 }
 		 public static String prueba3(String ciudad, int numero) throws InterruptedException {
-			 Properties configuracion = new Properties();
-			 ArrayList<String> ciudades = new ArrayList<>();
-			 String tiempo = null;
+			 Properties configuracion  =  new Properties();
+			 ArrayList<String> ciudades  =  new ArrayList<>();
+			 String tiempo  =  null;
 		        try {
 		            configuracion.load(new FileReader("src/resources/config.properties"));
-		            Set<String> nombresCiudades = configuracion.stringPropertyNames();
-		            String url = configuracion.getProperty(ciudad);
-		            String json = fetchDataFromURL(url);
-		            tiempo = tirmpo1(json, ciudad, numero);
+		            Set<String> nombresCiudades  =  configuracion.stringPropertyNames();
+		            String url  =  configuracion.getProperty(ciudad);
+		            String json  =  fetchDataFromURL(url);
+		            tiempo  =  tirmpo1(json, ciudad, numero);
 	            
 		        } catch (IOException e) {
 		            e.printStackTrace();
@@ -352,45 +359,45 @@ public class Controlador implements ActionListener {
 		 
 		 public static String  tirmpo(String info, String nombre){
 
-			 Gson ciudad = new Gson();
-	            JsonObject jsonO = ciudad.fromJson(info, JsonObject.class);
-	            String tiempo = jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(0).getAsJsonObject().get("weather").getAsString();
+			 Gson ciudad  =  new Gson();
+	            JsonObject jsonO  =  ciudad.fromJson(info, JsonObject.class);
+	            String tiempo  =  jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(0).getAsJsonObject().get("weather").getAsString();
 	            return tiempo;
 	    }
 		 
 		 public static String  tirmpo1(String info, String nombre, int numero){
 
-	            Gson ciudad = new Gson();
-	            JsonObject jsonO = ciudad.fromJson(info, JsonObject.class);
-	            String tiempo = jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(numero).getAsJsonObject().get("weather").getAsString();
+	            Gson ciudad  =  new Gson();
+	            JsonObject jsonO  =  ciudad.fromJson(info, JsonObject.class);
+	            String tiempo  =  jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(numero).getAsJsonObject().get("weather").getAsString();
 	            return tiempo;
 		 }
 		 public static String  max(String info, String nombre, int numero){
 
-	            Gson ciudad = new Gson();
-	            JsonObject jsonO = ciudad.fromJson(info, JsonObject.class);
-	            String max = jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(numero).getAsJsonObject().get("maxTemp").getAsString();
+	            Gson ciudad  =  new Gson();
+	            JsonObject jsonO  =  ciudad.fromJson(info, JsonObject.class);
+	            String max  =  jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(numero).getAsJsonObject().get("maxTemp").getAsString();
 	            return max;
 		 }
 		 public static String  min(String info, String nombre, int numero){
 
-	            Gson ciudad = new Gson();
-	            JsonObject jsonO = ciudad.fromJson(info, JsonObject.class);
-	            String min = jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(numero).getAsJsonObject().get("minTemp").getAsString();
+	            Gson ciudad  =  new Gson();
+	            JsonObject jsonO  =  ciudad.fromJson(info, JsonObject.class);
+	            String min  =  jsonO.getAsJsonObject("city").getAsJsonObject("forecast").getAsJsonArray("forecastDay").get(numero).getAsJsonObject().get("minTemp").getAsString();
 	            return min;
 		 }
 
 		
 		 private static String fetchDataFromURL(String url) throws IOException {
-			 URL weatherURL = new URL(url);
-		        HttpURLConnection connection = (HttpURLConnection) weatherURL.openConnection();
+			 URL weatherURL  =  new URL(url);
+		        HttpURLConnection connection  =  (HttpURLConnection) weatherURL.openConnection();
 		        connection.setRequestMethod("GET");
 		        connection.connect();
 
-		        StringBuilder result = new StringBuilder();
-		        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+		        StringBuilder result  =  new StringBuilder();
+		        BufferedReader reader  =  new BufferedReader(new InputStreamReader(connection.getInputStream()));
 		        String line;
-		        while ((line = reader.readLine()) != null) {
+		        while ((line  =  reader.readLine()) !=  null) {
 		            result.append(line);
 		        }
 		        reader.close();
@@ -398,7 +405,7 @@ public class Controlador implements ActionListener {
 		        return result.toString();   
 		 } 
 		 public static void main(String[] args) throws InterruptedException {
-			 Vista vista = new Vista();
+			 Vista vista  =  new Vista();
 			 vista.CAandalucia.setIcon(new ImageIcon(fotitos(prueba2("Sevilla"))));
 			 vista.CAbarcelona.setIcon(new ImageIcon(fotitos(prueba2("Barcelona"))));
 			 vista.CAnavarra.setIcon(new ImageIcon(fotitos(prueba2("Pamplona"))));
@@ -419,48 +426,63 @@ public class Controlador implements ActionListener {
 		}
 		
 		 public static String fotitos (String timepo) {
-			 String imaguen = null;
+			 String imagen  =  null;
 			 if (timepo.equalsIgnoreCase("Aguanieve")) {
-				 imaguen = "Imagenes/Aguanieve.png";
+				 imagen  =  "Imagenes/Aguanieve.png";
 			 }  else if (timepo.equalsIgnoreCase("Bruma")) {
-				 imaguen = "Imagenes/Bruma.png";
+				 imagen  =  "Imagenes/Bruma.png";
 			 } else if (timepo.equalsIgnoreCase("Chubascos aislados")) {
-				 imaguen = "Imagenes/Chubascos aislados.png";
+				 imagen  =  "Imagenes/Chubascos aislados.png";
 			 } else if (timepo.equalsIgnoreCase("Chubascos de nieve")) {
-				 imaguen = "Imagenes/Chubascos de nieve.png";
+				 imagen  =  "Imagenes/Chubascos de nieve.png";
 			 } else if (timepo.equalsIgnoreCase("Chubascos débiles")) {
-				 imaguen = "Imagenes/Chubascos débiles.png";
+				 imagen  =  "Imagenes/Chubascos débiles.png";
 			 } else if (timepo.equalsIgnoreCase("Chubascos")) {
-				 imaguen = "Imagenes/Chubascos.png";
+				 imagen  =  "Imagenes/Chubascos.png";
 			 } else if (timepo.equalsIgnoreCase("Cubierto")) {
-				 imaguen = "Imagenes/Cubierto.png";
+				 imagen  =  "Imagenes/Cubierto.png";
 			 } else if (timepo.equalsIgnoreCase("Granizo")) {
-				 imaguen = "Imagenes/Granizo.png";
+				 imagen  =  "Imagenes/Granizo.png";
 			 } else if (timepo.equalsIgnoreCase("Intervalos de sol")) {
-				 imaguen = "Imagenes/Intervalos de sol.png";
+				 imagen  =  "Imagenes/Intervalos de sol.png";
 			 } else if (timepo.equalsIgnoreCase("Lluvia")) {
-				 imaguen = "Imagenes/Lluvia.png";
+				 imagen  =  "Imagenes/Lluvia.png";
 			 } else if (timepo.equalsIgnoreCase("Nevada dévil")) {
-				 imaguen = "Imagenes/Nevada dévil.png";
+				 imagen  =  "Imagenes/Nevada dévil.png";
 			 } else if (timepo.equalsIgnoreCase("Niebla")) {
-				 imaguen = "Imagenes/Niebla.png";
+				 imagen  =  "Imagenes/Niebla.png";
 			 } else if (timepo.equalsIgnoreCase("Nieve")) {
-				 imaguen = "Imagenes/Nieve.png";
+				 imagen  =  "Imagenes/Nieve.png";
 			 } else if (timepo.equalsIgnoreCase("Muy nuboso")) {
-				 imaguen = "Imagenes/Nuboso.png";
+				 imagen  =  "Imagenes/Nuboso.png";
 			 } else if (timepo.equalsIgnoreCase("Parcialmente nuboso")) {
-				 imaguen = "Imagenes/Periodos de sol.png";
+				 imagen  =  "Imagenes/Periodos de sol.png";
 			 } else if (timepo.equalsIgnoreCase("Soleado")) {
-				 imaguen = "Imagenes/Soleado.png";
+				 imagen  =  "Imagenes/Soleado.png";
 			 } else if (timepo.equalsIgnoreCase("Tormentas")) {
-				 imaguen = "Imagenes/Tormentas.png";
+				 imagen  =  "Imagenes/Tormentas.png";
 			 } else if (timepo.equalsIgnoreCase("Lluvia débil")) {
-				 imaguen = "Imagenes/Lluvia débil.png";
+				 imagen  =  "Imagenes/Lluvia débil.png";
 			 } else if (timepo.equalsIgnoreCase("Chubascos dispersos")) {
-				 imaguen = "Imagenes/Chubascos dispersos.png";
+				 imagen  =  "Imagenes/Chubascos dispersos.png";
 			 }
-			return imaguen;
+			return imagen;
 		 }
-		 
+		
+			//metodo para reproducir sonido
+			public void playSound(String soundName){
+			   try 
+			   {
+			    AudioInputStream audioInputStream  =  AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile());
+			    Clip clip  =  AudioSystem.getClip();
+			    clip.open(audioInputStream);
+			    clip.start();
+			   }
+			   catch(Exception ex)
+			   {
+			     System.out.println("Error al reproducir el sonido.");
+			     ex.printStackTrace( );
+			   }
+			 } 
 	
 }
