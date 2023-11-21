@@ -549,6 +549,9 @@ public class Controlador implements ActionListener {
 				System.err.println("Selecciona una provincia valida porfavore");
 			}
 		}
+		
+			
+		
 		if (e.getSource() == this.vista.Dia1) {
 			int dia = 0;
 			try {
@@ -589,6 +592,7 @@ public class Controlador implements ActionListener {
 			LocalDate fecha = LocalDate.now().plusDays(3);
 			dias(dia, fecha);
 		}
+		
 	}
 
 	public void dias(int dia, LocalDate fecha) {
